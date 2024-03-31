@@ -1,0 +1,122 @@
+.menu__wrapper {
+  position: relative;
+  margin: 0 auto;
+  opacity: 0;
+
+  span {
+    position: absolute;
+    top: 5px;
+    opacity: 0;
+    transition-duration: .7s;
+    text-transform: uppercase;
+
+    // z-index: 98;
+  }
+
+  &:hover {
+    span {
+      opacity: 1;
+      transform: translate(-100px);
+    }
+  }
+
+  &:hover,
+  &.on {
+    .menu__item--bento {
+      transform: rotate(45deg);
+
+      .circle:nth-child(2),
+      .circle:nth-child(3),
+      .circle:nth-child(4),
+      .circle:nth-child(6),
+      .circle:nth-child(7),
+      .circle:nth-child(8) {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.on {
+    span {
+      opacity: 0;
+      transform: translate(0);
+    }
+
+    .menu__item--bento {
+      .circle:nth-child(5) {
+        display: none;
+      }
+
+      .circle:nth-child(9),
+      .circle:nth-child(1) {
+        height: 40px;
+      }
+
+      .circle:nth-child(9) {
+        transform: rotate(90deg);
+        left: 6px;
+        top: -6px;
+      }
+
+      .circle:nth-child(1) {
+        transform: rotate(0deg);
+        left: 6px;
+        top: -6px;
+      }
+    }
+  }
+
+  .menu__item--bento {
+    width: 3vw;
+    height: 3vh;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition-duration: .3s;
+    z-index: 99;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+
+    .circle {
+      width: .35rem;
+      height: .35rem;
+      margin: .35rem;
+      background: $text-color;
+      border-radius: 1rem;
+      display: block;
+      transition-duration: .7s;
+      position: absolute;
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+          $left: 0;
+          $top: 0;
+
+          @if $i % 3==0 {
+            $left: 24;
+          }
+
+          @else {
+            $left: (
+              $i - 1) % 3 * 12;
+          }
+
+          @if $i >3 and $i <=6 {
+            $top: 12;
+          }
+
+          @else if $i >6 {
+            $top: 24;
+          }
+
+          left: $left + px;
+          top: $top + px;
+        }
+      }
+    }
+  }
+}

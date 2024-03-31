@@ -1,0 +1,107 @@
+
+
+.pre-loader {
+  @include base(fixed);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.loader {
+    @include base();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $text-color;
+  color: $bgr;
+
+  &::after{
+    content: "";
+    animation: grain 8s steps(10) infinite;
+    background-image: url('../assets/images/paper-pattern.png');
+      height: 300%;
+      width: 300%;
+      left: -50%;
+      top: -110%;
+      opacity: 0.3;
+      position: fixed;
+    }
+}
+
+    @keyframes grain {
+      0%,
+      100% {
+        transform: translate(0, 0)
+      }
+      10% {
+        transform: translate(-5%, -10%)
+      }
+      20% {
+        transform: translate(-15%, 5%)
+      }
+      30% {
+        transform: translate(7%, -25%)
+      }
+      40% {
+        transform: translate(-5%, 25%)
+      }
+      50% {
+        transform: translate(-15%, 10%)
+      }
+      60% {
+        transform: translate(15%, 0%)
+      }
+      70% {
+        transform: translate(0%, 15%)
+      }
+      80% {
+        transform: translate(3%, 35%)
+      }
+      90% {
+        transform: translate(-10%, 10%)
+      }
+    }
+
+
+.loader-content {
+  position: fixed;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+    justify-content: center;
+      align-items: center;
+  max-width: 20vw;
+  z-index: 2;
+  color: $bgr;
+    font-size: 2rem;
+      font-family: "Special Elite", sans-serif;
+}
+
+.count {
+
+  line-height: 1;
+  padding-right: .5em;
+}
+
+.copy {
+
+  line-height: 1;
+}
+
+
+.loader-bg {
+  @include base();
+  display: block;
+  background: url('../assets/images/giphy.gif');
+  background-size: cover;
+  z-index: -1;
+}
+
+
+.loader-2 {
+    @include base();
+  background: black ;
+  background-size: cover;
+  z-index: -1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}

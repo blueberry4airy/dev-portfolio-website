@@ -1,0 +1,15 @@
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('#{$url}.woff2') format('woff2'),
+    url('#{$url}.woff') format('woff2');
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+ @include font-face('Special Elite', '../fonts/SpecialElite-Regular', 400);
+ @include font-face('Laila', '../fonts/Laila-Light', 300);
+ @include font-face('Laila', '../fonts/Laila-Regular', 400);
+ @include font-face('Laila', '../fonts/Laila-Medium', 500);
