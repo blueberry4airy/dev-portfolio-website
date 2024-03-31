@@ -24,13 +24,14 @@
 <!-- home section -->
 <header class="header">
   <div class="container header__container">
+<nav class="header__nav nav">
             <div class="header__circular-text">
               <a class="header__logo" href="#">
                 <span class="text"> Front-End • Web • Developer • </span>
                 O.G.</a>
             </div>
-            <div class="menu__wrapper">
-              <button onclick="btnSound.play()" id="bento-menu" class="menu__item--bento">
+            <div class="btn-bento__wrap">
+              <button onclick="btnSound.play()" id="btnBento" class="btn-bento">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
@@ -41,8 +42,10 @@
                 <div class="circle"></div>
                 <div class="circle"></div>
               </button>
-              <span>Menu</span>
+              <span class="bento-span">Menu</span>
             </div>
+</nav>
+
               <!-- <nav class="header__nav">
         <a class="link" href="#about">About</a>
         <a class="link" href="#skills">Skills</a>
@@ -79,7 +82,7 @@
 <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
 <script defer src="js/rotate.js"></script>
 
-<script defer src="js/btn.js"></script>
+<script defer src="js/bento-nav.js"></script>
 </body>
 
 </html>
