@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to('.header, .footer, .main', { opacity: 1, visibility: 'visible', duration: 1.5, delay: 2 });
             gsap.to('.loader-content', { visibility: 'hidden', duration: 0.5, delay: 0.5 });
             gsap.to('.loader', { visibility: 'hidden', duration: 0.5, delay: 0.5 });
-              gsap.to('.header__circular-text, .btn-bento__wrap', { opacity: 1, duration: 1, delay: 2 });
+              gsap.to('.header__circular-text, .btn-bento__wrap, canvas', { opacity: 1, duration: 1, delay: 2 });
 
     }
 

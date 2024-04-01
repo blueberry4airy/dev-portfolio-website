@@ -140,11 +140,23 @@ display: none;
     .block {
       flex: 1;
       height: 100%;
-      background: url('../../assets/images/paper-pattern.png');
+      background: $text-color;
       background-size: cover;
       background-repeat: no-repeat;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       margin-right: -2px;
+
+      &::after {
+          content: "";
+          animation: grain 8s steps(10) infinite;
+          background-image: url('../assets/images/paper-pattern.png');
+          height: 300%;
+          width: 300%;
+          left: -50%;
+          top: -110%;
+          opacity: 0.3;
+          position: fixed;
+        }
     }
 }
 
@@ -157,7 +169,7 @@ display: none;
   height: 100vh;
   @include flex();
   flex-direction: column;
-  color: $text-color;
+  color: $bgr;
   padding: 10em 5em;
   // font-weight: 300;
   font-family: 'Special Elite', sans-serif;

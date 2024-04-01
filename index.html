@@ -25,11 +25,15 @@
 <header class="header">
   <div class="container header__container">
 <nav class="header__nav nav">
+  <!-- circular logo rotation on scroll -->
             <div class="header__circular-text">
               <a class="header__logo" href="#">
                 <span class="text"> Front-End • Web • Developer • </span>
                 O.G.</a>
             </div>
+<!-- volume on off -->
+            
+<!-- button bento navigation menu -->
             <div class="btn-bento__wrap">
               <button onclick="btnSound.play()" id="btnBento" class="btn-bento">
                 <div class="circle"></div>
@@ -63,7 +67,8 @@
         <span>L</span>
         <span>M</span>
       </h1>
-
+      <canvas></canvas>
+      <audio src="/assets/sounds/spring.webm" id="audio" ></audio>
     </div>
     </section>
 </main>
@@ -77,6 +82,9 @@
 <script defer src="js/rotate.js"></script>
 
 <script defer src="js/bento-nav.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script defer src="js/player.js"></script>
 </body>
 
 </html>
