@@ -1,0 +1,57 @@
+.btn {
+  position: relative;
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid $text-color;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);;
+  background-color: $bgr;
+  border-radius: .5rem;
+  overflow: hidden;
+
+  &__icon,
+  &__text,
+  & {
+    transition: all .3s;
+  }
+
+  & .btn__text {
+    transform: translateX(22px);
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  & .btn__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 2.5rem;
+    background-color: $bg-color-grey;
+    @include flex();
+  }
+
+  & svg {
+    width: 1.5rem;
+    fill: $text-color;
+  }
+
+    &:hover {
+      background: $bg-color-grey;
+
+      & .btn__text {
+          color: transparent;
+        }
+
+        & .btn__icon {
+          width: 9rem;
+          transform: translateX(0);
+        }
+    }
+
+    &:active {
+      transform: translate(3px, 3px);
+      box-shadow: 0px 0px $text-color;
+    }
+}

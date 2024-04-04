@@ -48,7 +48,7 @@ const $overlayContainer = document.createElement('div'),
       $headerContainer = document.querySelector('.header__container');
       $headerContainer.append($overlayContainer);
       $overlayContainer.append($overlay, $overlayMenu);
-      $overlayMenu.append($about, $skills, $projects, $contacts);
+      $overlayMenu.append($projects, $skills,$about, $contacts);
       $about.append($aboutLink, $aboutImgWrap, $aboutLink2);
       $skills.append($skillsLink, $skillsImgWrap, $skillsLink2);
       $projects.append($projectsLink, $projectsImgWrap, $projectsLink2);
@@ -117,10 +117,18 @@ $skillsImg.src = '../assets/images/skills.gif'
 $projectsImg.src = '../assets/images/projects.gif'
 $contactsImg.src = '../assets/images/contacts.gif'
 
+// soudn page turn for the link
+const linkSound = new Audio();
+linkSound.src = "../assets/sounds/page-turn.webm";
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  const $btnBento = document.getElementById('btnBento');
-  const $heroHeading = document.querySelector('.hero__heading');
+  const $btnBento = document.getElementById('btnBento'),
+        $heroHeading = document.querySelector('.hero__heading'),
+        $heroIntroduction = document.querySelector('.hero__introduction'),
+        $footer = document.querySelector('.footer'),
+        $toggle = document.querySelector('.toggle'),
+        $logo = document.querySelector('.header__circular-text');
 
 
   let isOpen = false;
@@ -151,12 +159,20 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   $btnBento.addEventListener('click', () => {
+
     if (isOpen) {
       timeline.reverse();
             $heroHeading.style.display = 'flex'; // Add heading back to the DOM when overlay is closed
+            $heroIntroduction.style.display = 'flex';
+            $footer.style.display = 'flex';
+            $btnWrap.classList.add('on');
+            $toggle.classList.toggle('hidden');
     } else {
       timeline.play();
             $heroHeading.style.display = 'none'; // Remove heading from the DOM when overlay is open
+            $heroIntroduction.style.display = 'none';
+            $footer.style.display = 'none';
+             $toggle.classList.toggle('hidden');
     }
 
     isOpen = !isOpen;
@@ -166,6 +182,16 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       $overlayContainer.classList.remove('active'); // Remove active class to hide overlay contents
     }
+
+    $logo.addEventListener('click', () => {
+      linkSound.play();
+      timeline.reverse();
+            $heroHeading.style.display = 'flex'; // Add heading back to the DOM when overlay is closed
+            $heroIntroduction.style.display = 'flex';
+            $footer.style.display = 'flex';
+            $btnWrap.classList.remove('on');
+        window.location.href = $logo.querySelector('.header__circular-text').href;
+    })
   });
 
   //menu words storm

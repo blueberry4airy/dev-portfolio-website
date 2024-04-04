@@ -1,5 +1,7 @@
 const $canvas = document.querySelector('canvas'),
-  $audio = document.querySelector('#audio');
+  $audio = document.querySelector('#audio'),
+  $switch = document.querySelector('#switch');
+
 
   // Function to play the audio and loop it endlessly
 const playAudioLoop = () => {
@@ -9,6 +11,7 @@ const playAudioLoop = () => {
     $audio.play(); // Play the audio again
   });
 };
+
 
 let opt = {
   width: $canvas.offsetWidth,
@@ -65,8 +68,9 @@ $canvas.addEventListener('click', () => {
   opt.power = !opt.power;
 
   if (opt.power) {
-    // $audio.play();
-    playAudioLoop(); // Start playing the audio and loop it
+
+    playAudioLoop();
+    $switch.checked = true;
     TweenMax.to(opt, 1, {
       sinHeight: 4,
       stretch: 5,
@@ -74,6 +78,7 @@ $canvas.addEventListener('click', () => {
     });
   } else {
     $audio.pause();
+    $switch.checked = false;
     TweenMax.to(opt, 1, {
       sinHeight: 0,
       stretch: 10,
@@ -91,5 +96,37 @@ const toggleCanvasPosition = () => {
   $canvas.classList.toggle('overlay-opened');
 };
 
+
+// Event listener to play music when switch is clicked
+$switch.addEventListener('click', () => {
+ opt.power = !opt.power;
+
+  if (opt.power) {
+
+    playAudioLoop();
+    $switch.checked = true;
+    TweenMax.to(opt, 1, {
+      sinHeight: 4,
+      stretch: 5,
+      ease: Power2.easeInOut,
+    });
+  } else {
+    $audio.pause();
+    $switch.checked = false;
+    TweenMax.to(opt, 1, {
+      sinHeight: 0,
+      stretch: 10,
+      ease: Power3.easeOut,
+    });
+  }
+});
+
 // Event listener to toggle canvas position when overlay is opened/closed
 $btnBentoWrap.addEventListener('click', toggleCanvasPosition);
+
+
+const clickSound = new Audio();
+clickSound.src = "../assets/sounds/click-btn .mp3";
+
+
+

@@ -1,0 +1,47 @@
+.toggle {
+  position: absolute;
+  top: 40%;
+  /* Adjust as needed */
+  left: 94%;
+
+  width: 56px;
+  height: 56px;
+  // @include flex;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+  cursor: pointer;
+  opacity: 0;
+
+  .input {
+    display: none;
+  }
+  .icon {
+    // @include flex();
+      display: flex;
+        justify-content: center;
+        align-items: center;
+    transition: transform 500ms;
+
+    &-off {
+      transition-delay: 200ms;
+    }
+
+    &-on {
+      transform: scale(0);
+    }
+  }
+}
+
+#switch:checked + .icon-off {
+  transform: rotate(360deg) scale(0);
+}
+
+#switch:checked ~ .icon-on {
+  transition-delay: 200ms;
+  transform: scale(1) rotate(360deg) translate(-100%, -170%);
+}
+
+.hidden {
+  display: none;
+}
