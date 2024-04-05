@@ -24,22 +24,27 @@ const $overlayContainer = document.createElement('div'),
       $block7 = document.createElement('div'),
 
       $overlayMenu = document.createElement('div'),
+      $home = document.createElement('div'),
       $about = document.createElement('div'),
       $skills = document.createElement('div'),
       $projects = document.createElement('div'),
       $contacts = document.createElement('div'),
+      $homeLink = document.createElement('a'),
       $aboutLink = document.createElement('a'),
       $skillsLink = document.createElement('a'),
       $projectsLink = document.createElement('a'),
       $contactsLink = document.createElement('a'),
+      $homeLink2 = document.createElement('a'),
       $aboutLink2 = document.createElement('a'),
       $skillsLink2 = document.createElement('a'),
       $projectsLink2 = document.createElement('a'),
       $contactsLink2 = document.createElement('a'),
+      $homeImgWrap = document.createElement('div'),
       $aboutImgWrap = document.createElement('div'),
       $skillsImgWrap = document.createElement('div'),
       $projectsImgWrap = document.createElement('div'),
       $contactsImgWrap = document.createElement('div'),
+      $homeImg = document.createElement('img'),
       $aboutImg = document.createElement('img'),
       $skillsImg = document.createElement('img'),
       $projectsImg = document.createElement('img'),
@@ -48,11 +53,13 @@ const $overlayContainer = document.createElement('div'),
       $headerContainer = document.querySelector('.header__container');
       $headerContainer.append($overlayContainer);
       $overlayContainer.append($overlay, $overlayMenu);
-      $overlayMenu.append($projects, $skills,$about, $contacts);
+      $overlayMenu.append($home, $projects, $skills,$about, $contacts);
+      $home.append($homeLink, $homeImgWrap, $homeLink2);
       $about.append($aboutLink, $aboutImgWrap, $aboutLink2);
       $skills.append($skillsLink, $skillsImgWrap, $skillsLink2);
       $projects.append($projectsLink, $projectsImgWrap, $projectsLink2);
       $contacts.append($contactsLink, $contactsImgWrap, $contactsLink2);
+      $homeImgWrap.append($homeImg);
       $aboutImgWrap.append($aboutImg);
       $skillsImgWrap.append($skillsImg);
       $projectsImgWrap.append($projectsImg);
@@ -73,45 +80,55 @@ $block6.classList.add('block');
 $block7.classList.add('block');
 
 $overlayMenu.classList.add('overlay-menu');
+$home.classList.add('item', 'home');
 $about.classList.add('item', 'about');
 $skills.classList.add('item', 'skills');
 $projects.classList.add('item', 'projects');
 $contacts.classList.add('item', 'contacts');
+$homeLink.classList.add('link', 'home__link-1');
 $aboutLink.classList.add('link', 'about__link-1');
 $skillsLink.classList.add('link', 'skills__link-1');
 $projectsLink.classList.add('link', 'projects__link-1');
 $contactsLink.classList.add('link', 'contacts__link-1');
+$homeLink2.classList.add('link', 'home__link-2');
 $aboutLink2.classList.add('link', 'about__link-2');
 $skillsLink2.classList.add('link', 'skills__link-2');
 $projectsLink2.classList.add('link', 'projects__link-2');
 $contactsLink2.classList.add('link', 'contacts__link-2');
+$homeImgWrap.classList.add('img-wrap');
 $aboutImgWrap.classList.add('img-wrap');
 $skillsImgWrap.classList.add('img-wrap');
 $projectsImgWrap.classList.add('img-wrap');
 $contactsImgWrap.classList.add('img-wrap');
+$homeImg.classList.add('img');
 $aboutImg.classList.add('img');
 $skillsImg.classList.add('img');
 $projectsImg.classList.add('img');
 $contactsImg.classList.add('img');
 
+$homeLink.href = '#hero';
 $aboutLink.href = '#about';
 $skillsLink.href = '#skills';
 $projectsLink.href = '#projects';
 $contactsLink.href = '#contacts';
+$homeLink2.href = '#hero';
 $aboutLink2.href = '#about';
 $skillsLink2.href = '#skills';
 $projectsLink2.href = '#projects';
 $contactsLink2.href = '#contacts';
 
+$homeLink.textContent = 'Welcome';
 $aboutLink.textContent = 'About';
 $skillsLink.textContent = 'Skills';
 $projectsLink.textContent = 'Projects';
 $contactsLink.textContent = 'Contacts';
+$homeLink2.textContent = 'Home';
 $aboutLink2.textContent = 'my persona';
 $skillsLink2.textContent = 'my stack';
 $projectsLink2.textContent = 'my work';
 $contactsLink2.textContent = "Let's get in touch!";
 
+$homeImg.src = '../assets/images/home.gif'
 $aboutImg.src = '../assets/images/about.gif'
 $skillsImg.src = '../assets/images/skills.gif'
 $projectsImg.src = '../assets/images/projects.gif'
@@ -123,13 +140,10 @@ linkSound.src = "../assets/sounds/page-turn.webm";
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const $btnBento = document.getElementById('btnBento'),
-        $heroHeading = document.querySelector('.hero__heading'),
+  const $heroHeading = document.querySelector('.hero__heading'),
         $heroIntroduction = document.querySelector('.hero__introduction'),
         $footer = document.querySelector('.footer'),
-        $toggle = document.querySelector('.toggle'),
-        $logo = document.querySelector('.header__circular-text');
-
+        $toggle = document.querySelector('.toggle');
 
   let isOpen = false;
 
@@ -158,40 +172,34 @@ document.addEventListener('DOMContentLoaded', () => {
     "-=0.5"
   );
 
-  $btnBento.addEventListener('click', () => {
+  $btnWrap.addEventListener('click', () => {
 
     if (isOpen) {
-      timeline.reverse();
-            $heroHeading.style.display = 'flex'; // Add heading back to the DOM when overlay is closed
-            $heroIntroduction.style.display = 'flex';
-            $footer.style.display = 'flex';
-            $btnWrap.classList.add('on');
-            $toggle.classList.toggle('hidden');
-    } else {
-      timeline.play();
-            $heroHeading.style.display = 'none'; // Remove heading from the DOM when overlay is open
-            $heroIntroduction.style.display = 'none';
-            $footer.style.display = 'none';
-             $toggle.classList.toggle('hidden');
-    }
-
-    isOpen = !isOpen;
-
-    if (isOpen) {
-      $overlayContainer.classList.add('active'); // Add active class to make overlay contents visible
-    } else {
-      $overlayContainer.classList.remove('active'); // Remove active class to hide overlay contents
-    }
-
-    $logo.addEventListener('click', () => {
-      linkSound.play();
       timeline.reverse();
             $heroHeading.style.display = 'flex'; // Add heading back to the DOM when overlay is closed
             $heroIntroduction.style.display = 'flex';
             $footer.style.display = 'flex';
             $btnWrap.classList.remove('on');
-        window.location.href = $logo.querySelector('.header__circular-text').href;
-    })
+            $toggle.classList.remove('hidden');
+            $overlayContainer.style.display = 'none';
+
+
+
+
+    } else {
+      timeline.play();
+            $heroHeading.style.display = 'none'; // Remove heading from the DOM when overlay is open
+            $heroIntroduction.style.display = 'none';
+            $footer.style.display = 'none';
+            $btnWrap.classList.add('on');
+             $toggle.classList.add('hidden');
+             $overlayContainer.style.display = 'block';
+
+
+
+    }
+
+    isOpen = !isOpen;
   });
 
   //menu words storm

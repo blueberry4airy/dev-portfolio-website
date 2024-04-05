@@ -27,7 +27,7 @@
       <nav class="header__nav nav">
         <!-- circular logo rotation on scroll -->
         <div class="header__circular-text">
-          <a class="header__logo" href="#hero" onclick="linkSound.play()">
+          <a class="header__logo" href="#">
             <span class="text"> Front-End • Web • Developer • </span>
             O.G.</a>
         </div>
@@ -52,7 +52,9 @@
 
     </div>
   </header>
+
   <main class="main">
+
     <section class=" section-reset hero" id="hero">
       <div class="container hero__container">
         <h1 class="hero__heading">
@@ -152,12 +154,16 @@
 
       </div>
     </section>
-<section class="section-reset projects" id="projects">
+
+<section class="section-reset projects__section" id="projects">
   <div class="container projects__container">
+
 
   </div>
 </section>
+
   </main>
+
   <footer class="footer">
     <div class="container footer__container">
       <span class="copyright">© 2024 by Olga Gorincioi</span>
@@ -231,16 +237,25 @@
       </div>
     </div>
   </footer>
+
+
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
-  <script defer src="js/preloader.js"></script>
+
+  <!-- <script defer src="js/preloader.js"></script>
   <script defer src="js/rotate.js"></script>
   <script defer src="js/bento-nav.js"></script>
   <script defer src="js/player.js"></script>
   <script defer src="js/greeting.js"></script>
+  <script defer src="js/projects.js"></script> -->
+
+  <script src="dist/js/bundle.js" defer></script>
 </body>
 
 </html>

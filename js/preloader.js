@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showSiteContent() {
       gsap.from('.count', { opacity: 0, delay: 3.5, duration: 0.5 });
-       gsap.from('.header, .footer, .main', {  visibility: 'hidden', duration: 0.5, delay: 0.9 });
+       gsap.from('header, footer, main', {  visibility: 'hidden', duration: 0.5, delay: 0.9 });
 
         // Animate the header
         gsap.to('.hero__heading span', {
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to('.loader-2', { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', ease: 'power4.inOut', duration: 2 });
 
         // Show site content
-        gsap.to('.header, .footer, .main', { opacity: 1, visibility: 'visible', duration: 1.5, delay: 2 });
+        gsap.to('header, footer, main', {  visibility: 'visible', duration: 1.5, delay: 2 });
             gsap.to('.loader-content', { visibility: 'hidden', duration: 0.5, delay: 0.5 });
             gsap.to('.loader', { visibility: 'hidden', duration: 0.5, delay: 0.5 });
               gsap.to('.header__circular-text, .btn-bento__wrap, canvas, .toggle, .hero__introduction', { opacity: 1, duration: 1, delay: 2 });
