@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     function startLoader() {
         let counterElement = document.querySelector('.count');
@@ -21,7 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+
     function showSiteContent() {
+
       gsap.from('.count', { opacity: 0, delay: 3.5, duration: 0.5 });
        gsap.from('header, footer, main', {  visibility: 'hidden', duration: 0.5, delay: 0.9 });
 
@@ -43,9 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to('header, footer, main', {  visibility: 'visible', duration: 1.5, delay: 2 });
             gsap.to('.loader-content', { visibility: 'hidden', duration: 0.5, delay: 0.5 });
             gsap.to('.loader', { visibility: 'hidden', duration: 0.5, delay: 0.5 });
-              gsap.to('.header__circular-text, .btn-bento__wrap, canvas, .toggle, .hero__introduction', { opacity: 1, duration: 1, delay: 2 });
+              gsap.to('.header__circular-text, .btn-bento__wrap, canvas, .toggle, .hero__introduction, .projects__container ', { opacity: 1, duration: 1, delay: 2 });
 
     }
 
     startLoader(); // Start the loader animation
 });
+
+

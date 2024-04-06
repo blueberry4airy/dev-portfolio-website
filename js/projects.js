@@ -1,54 +1,45 @@
-const container = document.querySelector(".scrollx");
-const sections = gsap.utils.toArray(".pin");
-const texts = gsap.utils.toArray(".anim");
-const mask = document.querySelector(".mask");
+let lenis;
 
-let scrollTween = gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".scrollx",
-    pin: true,
-    scrub: 1,
-    end: "+=3000",
-    //snap: 1 / (sections.length - 1),
-    // markers: true,
-  }
-});
+const $grid = document.querySelector('.grid'),
+      $gridBox = $grid.querySelectorAll('.grid__box'),
 
-console.log(1 / (sections.length - 1))
-
-//Progress bar animation
-
-gsap.to(mask, {
-  width: "100%",
-  scrollTrigger: {
-    trigger: ".projects__container",
-    start: "top left",
-    scrub: 1
-  }
-});
-
-// whizz around the sections
-sections.forEach((section) => {
-  // grab the scoped text
-  let text = section.querySelectorAll(".anim");
-
-  // bump out if there's no items to animate
-  if(text.length === 0)  return
-
-  // do a little stagger
-  gsap.from(text, {
-    y: -130,
-    opacity: 0,
-    duration: 2,
-    ease: "elastic",
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: section,
-      containerAnimation: scrollTween,
-      start: "left center",
-      // markers: true
-    }
+initLenis = ()=> {
+  lenis = new Lenis({
+    lerp: 0.08,
+    smoothWheel: true,
   });
-});
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+};
+
+animateBoxes = () => {
+  $gridBox.forEach((box) => {
+    box.addEventListener('mouseenter', () => {
+      $gridBox.forEach((otherBox) => {
+        if (otherBox != box) {
+          otherBox.style.filter = 'grayscale(100%)';
+          otherBox.style.transform = 'scale(0.4)';
+        } else {
+          otherBox.style.filter = 'grayscale(0)';
+          otherBox.style.transform = 'scale(0.8)';
+        }
+      });
+    });
+
+    box.addEventListener('mouseleave', () => {
+      $gridBox.forEach((otherBox) => {
+          otherBox.style.filter = 'grayscale(0)';
+          otherBox.style.transform = 'scale(0.6)';
+      })
+    })
+  })
+}
+
+window.onload = () => {
+  initLenis();
+  animateBoxes();
+};

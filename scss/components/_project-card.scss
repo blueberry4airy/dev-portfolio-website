@@ -1,0 +1,74 @@
+  .grid__box {
+    position: relative;
+    @include flex();
+    background-color: $text-color;
+    border: 1px solid $text-color;
+    border-radius: 0.4rem;
+    transform: scale(0.6);
+    transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+    overflow: hidden;
+    perspective: 1000px;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px $text-color;
+      background-color: $bg-color-grey;
+      color: #000;
+
+      & .grid__box-back {
+        transform: rotateX(0deg);
+      }
+
+      & .grid__box-img {
+        scale: 0;
+      }
+    }
+
+    &-front {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 1.6rem;
+      display: flex;
+      justify-content: space-between;
+      z-index: 100;
+    }
+
+    &-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 6rem 2rem 2rem;
+      box-sizing: border-box;
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .grid__box-link {
+        display: flex;
+        justify-content: space-between;
+
+        & a:hover,
+        & a:active {
+          color: $bgr-red;
+        }
+
+        & a:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  }

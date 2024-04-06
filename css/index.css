@@ -94,6 +94,17 @@ img {
   padding: 3rem 0;
 }
 
+.section-title {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-title .char {
+  display: inline-block;
+}
+
 /*
 @mixin mobile {
   @media(max-width: 576px) {
@@ -256,6 +267,7 @@ h1 {
 .btn-bento__wrap {
   position: relative;
   opacity: 0;
+  z-index: 99999;
 }
 .btn-bento__wrap .bento-span {
   position: absolute;
@@ -639,6 +651,73 @@ h1 {
   width: 80px;
 }
 
+.grid__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1d1d;
+  border: 1px solid #1d1d1d;
+  border-radius: 0.4rem;
+  transform: scale(0.6);
+  transition: all 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  overflow: hidden;
+  perspective: 1000px;
+}
+.grid__box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px #1d1d1d;
+  background-color: #dedede;
+  color: #000;
+}
+.grid__box:hover .grid__box-back {
+  transform: rotateX(0deg);
+}
+.grid__box:hover .grid__box-img {
+  scale: 0;
+}
+.grid__box-front {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+.grid__box-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 6rem 2rem 2rem;
+  box-sizing: border-box;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.grid__box-back .grid__box-link {
+  display: flex;
+  justify-content: space-between;
+}
+.grid__box-back .grid__box-link a:hover, .grid__box-back .grid__box-link a:active {
+  color: #930000;
+}
+.grid__box-back .grid__box-link a:active {
+  transform: scale(0.9);
+}
+.grid__box-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 /*       hero     */
 .hero__container {
   display: flex;
@@ -673,7 +752,7 @@ canvas {
   opacity: 0;
 }
 canvas.overlay-opened {
-  top: 3%;
+  top: 2%;
   /* Adjust this value for the desired top position */
   transform: translateX(-50%);
   width: 10vw;
@@ -758,4 +837,37 @@ canvas.overlay-opened {
   75%, 100% {
     opacity: 0;
   }
+}
+
+.projects__container {
+  padding: 0 5rem;
+  opacity: 0;
+}
+.projects__container .grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 10rem);
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  grid-auto-flow: row;
+  grid-template-areas: "b1 b1 b1 b1 b2 b2" "b1 b1 b1 b1 b2 b2" "b3 b3 b4 b4 b2 b2" "b3 b3 b4 b4 b2 b2" "b5 b5 b5 b5 b6 b6" "b5 b5 b5 b5 b6 b6" "b5 b5 b5 b5 b6 b6" "b5 b5 b5 b5 b6 b6";
+}
+.projects__container .grid .b1 {
+  grid-area: b1;
+}
+.projects__container .grid .b2 {
+  grid-area: b2;
+}
+.projects__container .grid .b3 {
+  grid-area: b3;
+}
+.projects__container .grid .b4 {
+  grid-area: b4;
+}
+.projects__container .grid .b5 {
+  grid-area: b5;
+}
+.projects__container .grid .b6 {
+  grid-area: b6;
 }

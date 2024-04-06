@@ -69,4 +69,14 @@ img {
     // flex: 1 0 auto;
 }
 
+.section-title {
+    position: relative;
+      font-size: 3rem;
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
 
+        .char {
+            display: inline-block;
+          }
+}

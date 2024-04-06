@@ -1,6 +1,5 @@
 @use "sass:math";
 
-
 @import "fonts";
 
 // variables
@@ -23,6 +22,7 @@
 @import "components/contact-link";
 @import "components/contacts-btn";
 @import "components/footer";
+@import "components/project-card";
 
 /*       hero     */
 
@@ -63,7 +63,7 @@ canvas {
   opacity: 0;
 
   &.overlay-opened {
-    top: 3%;
+    top: 2%;
     /* Adjust this value for the desired top position */
     transform: translateX(-50%);
     width: 10vw;
@@ -73,7 +73,7 @@ canvas {
 
 .hero {
   &__introduction {
-display: flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     opacity: 0;
@@ -82,10 +82,9 @@ display: flex;
   &__links {
     display: flex;
     flex-direction: column-reverse;
-   justify-content: space-evenly;
-   align-items: center;
-   gap: 1em;
-
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
   }
 
   &__text {
@@ -172,6 +171,51 @@ display: flex;
           }
         }
       }
+    }
+  }
+}
+
+// grid  projects section
+.projects__container {
+  padding: 0 5rem;
+  opacity: 0;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 10rem);
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    grid-auto-flow: row;
+
+    grid-template-areas:
+      "b1 b1 b1 b1 b2 b2"
+      "b1 b1 b1 b1 b2 b2"
+      "b3 b3 b4 b4 b2 b2"
+      "b3 b3 b4 b4 b2 b2"
+      "b5 b5 b5 b5 b6 b6"
+      "b5 b5 b5 b5 b6 b6"
+      "b5 b5 b5 b5 b6 b6"
+      "b5 b5 b5 b5 b6 b6";
+
+    .b1 {
+      grid-area: b1;
+    }
+    .b2 {
+      grid-area: b2;
+    }
+    .b3 {
+      grid-area: b3;
+    }
+    .b4 {
+      grid-area: b4;
+    }
+    .b5 {
+      grid-area: b5;
+    }
+    .b6 {
+      grid-area: b6;
     }
   }
 }

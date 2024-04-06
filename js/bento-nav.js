@@ -1,5 +1,5 @@
 // navigation button bento
-const $btnWrap = document.querySelector(".btn-bento__wrap");
+ const $btnWrap = document.querySelector(".btn-bento__wrap");
 
 $btnWrap.addEventListener('click',function () {
   return $btnWrap.classList.toggle("on")
@@ -141,9 +141,10 @@ linkSound.src = "../assets/sounds/page-turn.webm";
 
 document.addEventListener('DOMContentLoaded', () => {
   const $heroHeading = document.querySelector('.hero__heading'),
-        $heroIntroduction = document.querySelector('.hero__introduction'),
+        // $heroIntroduction = document.querySelector('.hero__introduction'),
         $footer = document.querySelector('.footer'),
-        $toggle = document.querySelector('.toggle');
+        // $toggle = document.querySelector('.toggle'),
+        $main = document.querySelector('.main');
 
   let isOpen = false;
 
@@ -176,11 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isOpen) {
       timeline.reverse();
-            $heroHeading.style.display = 'flex'; // Add heading back to the DOM when overlay is closed
-            $heroIntroduction.style.display = 'flex';
+            // $heroHeading.style.display = 'flex'; // Add heading back to the DOM when overlay is closed
+            // $heroIntroduction.style.display = 'flex';
             $footer.style.display = 'flex';
+            $main.style.display = 'block';
             $btnWrap.classList.remove('on');
-            $toggle.classList.remove('hidden');
+            // $toggle.classList.remove('hidden');
             $overlayContainer.style.display = 'none';
 
 
@@ -188,12 +190,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     } else {
       timeline.play();
-            $heroHeading.style.display = 'none'; // Remove heading from the DOM when overlay is open
-            $heroIntroduction.style.display = 'none';
+            // $heroHeading.style.display = 'none'; // Remove heading from the DOM when overlay is open
+            // $heroIntroduction.style.display = 'none';
             $footer.style.display = 'none';
             $btnWrap.classList.add('on');
-             $toggle.classList.add('hidden');
-             $overlayContainer.style.display = 'block';
+            // $toggle.classList.add('hidden');
+            $main.style.display = 'none';
+            $overlayContainer.style.display = 'block';
 
 
 
@@ -253,3 +256,4 @@ function shuffleAnimation(event) {
     }
   }, intervalDuration);
 }
+
