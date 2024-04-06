@@ -75,6 +75,7 @@ img {
       font-weight: 400;
       text-align: center;
       text-transform: uppercase;
+     clip-path:  polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
         .char {
             display: inline-block;

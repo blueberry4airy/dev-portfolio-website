@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      tl.from(textChar, 1, {opacity: 0, yPercent: 150, stagger: 0.08, ease: 'power4.in', duration: 3.5,  })
+      tl.from(textChar, 1, {opacity: 0, yPercent: 150, stagger: 0.08, ease: 'power4.out', duration: 3.5,  })
   });
 })
+

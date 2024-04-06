@@ -23,6 +23,12 @@
 @import "components/contacts-btn";
 @import "components/footer";
 @import "components/project-card";
+@import "components/card-about";
+
+
+@import "text-infinite";
+@import "swap-texthero";
+
 
 /*       hero     */
 
@@ -72,6 +78,8 @@ canvas {
 }
 
 .hero {
+    margin-bottom: 3rem;
+
   &__introduction {
     display: flex;
     flex-wrap: wrap;
@@ -86,96 +94,11 @@ canvas {
     align-items: center;
     gap: 1em;
   }
-
-  &__text {
-    $_self: &;
-    $_swappable: #{$_self}-swappable;
-    // max-width: 50ch;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    margin-bottom: 1.5em;
-    max-width: 80%;
-
-    &-span {
-      display: inline-block;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      // text-indent: 2em;
-    }
-
-    &#{$_swappable} {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-      color: $bgr-red;
-      position: relative;
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(0);
-
-      &:empty {
-        opacity: 0;
-      }
-
-      &:not(:empty) {
-        opacity: 1;
-
-        &.slide--in {
-          animation: text-swap-slide-in 0.4s ease-in;
-
-          @keyframes text-swap-slide-in {
-            0% {
-              transform: translateY(16px);
-              opacity: 0;
-            }
-
-            30% {
-              transform: translateY(2px);
-              opacity: 0.8;
-            }
-
-            60% {
-              transform: translateY(0);
-              opacity: 0.95;
-            }
-
-            75%,
-            100% {
-              opacity: 1;
-            }
-          }
-        }
-
-        &.slide--out {
-          animation: text-swap-slide-out 0.25s ease-out;
-
-          @keyframes text-swap-slide-out {
-            0% {
-              transform: translateY(0);
-              opacity: 1;
-            }
-
-            50% {
-              transform: translateY(-12px);
-              opacity: 0.1;
-            }
-
-            60% {
-              transform: translateY(-16px);
-              opacity: 0.05;
-            }
-
-            75%,
-            100% {
-              opacity: 0;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 // grid  projects section
+
+
 .projects__container {
   padding: 0 5rem;
   opacity: 0;
@@ -220,4 +143,17 @@ canvas {
   }
 }
 
+// skills section
 
+.skills__section {
+  margin-bottom: 3rem;
+
+  .skills__title {
+    margin-bottom: 3rem;
+  }
+}
+
+
+
+/////about me section
+///

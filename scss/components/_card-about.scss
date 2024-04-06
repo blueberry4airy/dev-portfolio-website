@@ -1,0 +1,64 @@
+
+.about__container {
+
+  .about__title {
+    margin-bottom: 3rem;
+  }
+
+  .about__text p {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+
+.card {
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+  background-color: $bg-color-grey;
+  width: 50%;
+  height: 100%;
+border: 1px solid $bgr-red;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+  transition: 0.5s;
+  transform: rotateX(-55deg) rotateY(15deg) rotateZ(60deg);
+  font-weight: 300;
+  @include flex();
+
+
+  &:hover {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+      width: 120%;
+      height: 110%;
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 15px;
+      transform: translate(-50%, -50%);
+      filter: blur(30px);
+      animation: animate 5s linear infinite;
+    }
+}
+
+
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+

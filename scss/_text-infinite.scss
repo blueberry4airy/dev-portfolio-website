@@ -1,0 +1,50 @@
+ .skills__content {
+   text-align: center;
+   max-width: 100%;
+   margin: 0 auto;
+   overflow: hidden;
+   border-top: 1px solid $text-color;
+   border-bottom: 1px solid $text-color;
+  //  border-radius: 0.4rem;
+box-shadow: 0px -20px 30px -36px rgba(0, 0, 0, 0.45),
+    0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+
+   .skill {
+     font-size: 1.8rem;
+     font-weight: 300;
+     text-transform: uppercase;
+     transform: translateX(100%);
+     white-space: nowrap;
+     letter-spacing: .5vw;
+
+     &:hover {
+       animation-play-state: paused;
+       color: $bgr-red;
+       cursor: pointer;
+     }
+
+   }
+ }
+
+
+.skill-1 {
+  animation: moveText linear 35s -8s forwards infinite;
+}
+
+.skill-2 {
+  animation: moveText linear 35s forwards infinite;
+}
+
+.skill-3 {
+  animation: moveText linear 35s 8s forwards infinite;
+}
+
+@keyframes moveText {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-150%);
+  }
+}
