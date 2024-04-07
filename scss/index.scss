@@ -24,6 +24,7 @@
 @import "components/footer";
 @import "components/project-card";
 @import "components/card-about";
+@import "components/contact-form";
 
 
 @import "text-infinite";
@@ -66,7 +67,7 @@ canvas {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  // opacity: 0;
 
   &.overlay-opened {
     top: 2%;
@@ -84,7 +85,7 @@ canvas {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    opacity: 0;
+    // opacity: 0;
   }
 
   &__links {
@@ -101,7 +102,7 @@ canvas {
 
 .projects__container {
   padding: 0 5rem;
-  opacity: 0;
+  // opacity: 0;
 
   .grid {
     display: grid;
@@ -143,17 +144,11 @@ canvas {
   }
 }
 
-// skills section
 
+
+// skills section
 .skills__section {
   margin-bottom: 3rem;
-
-  .skills__title {
-    margin-bottom: 3rem;
-  }
 }
 
 
-
-/////about me section
-///

@@ -1,0 +1,69 @@
+.contact-form {
+  @include flex();
+  min-height: 350px;
+  margin: 0 auto;
+  padding: 3rem 2rem 2rem;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 15px;
+  background: $bg-color-grey;
+  border-radius: 0.5rem;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.input-box,
+.input-box1 {
+  position: relative;
+  width: 100%;
+
+  & .input {
+    width: 100%;
+    padding: 0.7rem;
+    outline: none;
+    border: none;
+    font-size: 1em;
+    background: transparent;
+    border-left: 2px solid $text-color;
+    border-bottom: 2px solid $text-color;
+    transition: 0.3s;
+    border-bottom-left-radius: 0.5rem;
+
+    &:valid,
+    &:focus {
+      border: 2px solid #000;
+      border-radius: 8px;
+
+      &~.placeholder {
+        transform: translateX(1rem) translateY(-1.5rem);
+        font-size: 0.8em;
+        padding: 5px 10px;
+        background: #000;
+        letter-spacing: 0.2em;
+        color: #fff;
+        border: 2px;
+      }
+    }
+  }
+
+  & .placeholder {
+    position: absolute;
+    left: 0;
+    margin-left: 0.4rem;
+    padding: 0.7rem;
+    pointer-events: none;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 3px;
+    border-radius: 0.5rem;
+  }
+}
+
+

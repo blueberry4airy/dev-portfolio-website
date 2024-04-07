@@ -14,7 +14,6 @@ body {
   line-height: normal;
   min-width: 320px;
   font-size: 1rem;
-  // overflow: hidden;
 }
 
 h1,
@@ -76,8 +75,26 @@ img {
       text-align: center;
       text-transform: uppercase;
      clip-path:  polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-
+    margin-bottom: 3rem;
         .char {
             display: inline-block;
           }
+}
+
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  // overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+.header,
+.footer,
+.section {
+  opacity: 0;
 }

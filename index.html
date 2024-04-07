@@ -55,7 +55,7 @@
 
   <main class="main">
 
-    <section class=" section-reset hero" id="hero">
+    <section class=" section-reset section hero" id="hero">
       <div class="container hero__container">
         <h1 class="hero__heading">
           <span>O</span>
@@ -154,7 +154,7 @@
       </div>
     </section>
 
-    <section class="section-reset projects__section" id="projects">
+    <section class="section-reset section projects__section" id="projects">
       <div class="container projects__container">
         <h2 class="projects__title section-title" data-splitting>
           My Projects
@@ -273,7 +273,8 @@
 
       </div>
     </section>
-    <section class="section-reset skills__section" id="skills">
+
+    <section class="section-reset section skills__section" id="skills">
       <div class="container skills__container">
         <h2 class="skills__title section-title" data-splitting>
           My Tech Stack
@@ -288,7 +289,8 @@
         </div>
       </div>
     </section>
-    <section class="section-reset about__section" id="about">
+
+    <section class="section-reset section about__section" id="about">
       <div class="container about__container">
         <h2 class="about__title section-title" data-splitting> A little bit more about me</h2>
 
@@ -321,6 +323,43 @@
 
       </div>
     </section>
+
+    <section class="section-reset section contact__section" id="contacts">
+      <div class="container contact__container">
+        <h2 class="section-title contact__title" data-splitting>
+          Contact me! I am open to work
+        </h2>
+<form class="contact-form" action="https://public.herotofu.com/v1/46548dc0-f4d2-11ee-b428-632ee80a2804" method="post" accept-charset="UTF-8">
+            <label class="visually-hidden" for="name">Full name or company name</label>
+            <div class="input-box1">
+              <input class="input" type="text" name="Name" id="name" required="">
+              <span class="placeholder">Name</span>
+            </div>
+            <label class="visually-hidden" for="email">Email address </label>
+            <div class="input-box">
+              <input class="input" type="email" id="email" name="Email" required="">
+              <span class="placeholder">Email</span>
+            </div>
+            <label class="visually-hidden" for="message">Your message</label>
+            <div class="input-box">
+              <textarea class="input textarea" id="message" name="Message" required="" rows="5"></textarea>
+              <span class="placeholder">Message</span>
+            </div>
+            <button class="contact-btn btn" type="submit" onclick="clickSound.play()">
+                              <span class="btn__text">Resume</span>
+                              <span class="btn__icon">
+                              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M20.7639 12H10.0556M3 8.00003H5.5M4 12H5.5M4.5 16H5.5M9.96153 12.4896L9.07002 15.4486C8.73252 16.5688 8.56376 17.1289 8.70734 17.4633C8.83199 17.7537 9.08656 17.9681 9.39391 18.0415C9.74792 18.1261 10.2711 17.8645 11.3175 17.3413L19.1378 13.4311C20.059 12.9705 20.5197 12.7402 20.6675 12.4285C20.7961 12.1573 20.7961 11.8427 20.6675 11.5715C20.5197 11.2598 20.059 11.0295 19.1378 10.5689L11.3068 6.65342C10.2633 6.13168 9.74156 5.87081 9.38789 5.95502C9.0808 6.02815 8.82627 6.24198 8.70128 6.53184C8.55731 6.86569 8.72427 7.42461 9.05819 8.54246L9.96261 11.5701C10.0137 11.7411 10.0392 11.8266 10.0493 11.9137C10.0583 11.991 10.0582 12.069 10.049 12.1463C10.0387 12.2334 10.013 12.3188 9.96153 12.4896Z"
+                                  stroke="#1d1d1d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                              </span>
+            </button>
+          </form>
+        </div>
+
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -328,7 +367,7 @@
       <span class="copyright">© 2024 by Olga Gorincioi</span>
 
       <div class="social-links">
-        <a id="facebook" class="social-link">
+        <a id="facebook" class="social-link" target="_blank" rel="noopener noreferrer" onclick="linkSound.play()" href="https://www.facebook.com/profile.php?id=100004179046367">
           <svg>
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -340,7 +379,7 @@
           </svg><span>facebook</span>
         </a>
 
-        <a id="instagram" class="social-link">
+        <a id="instagram" class="social-link" target="_blank" rel="noopener noreferrer" onclick="linkSound.play()" href="https://www.instagram.com/frontdev_4airy_olga.gorincioi">
           <svg>
             <g id="SVGRepo_bgCarrier1" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier1" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -358,7 +397,7 @@
           </svg><span>instagram</span>
         </a>
 
-        <a id="linkedin" class="social-link">
+        <a id="linkedin" class="social-link" target="_blank" rel="noopener noreferrer" onclick="linkSound.play()" href="https://www.linkedin.com/in/olgagorincioi/">
           <svg>
             <g id="SVGRepo_bgCarrier2" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier2" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -379,7 +418,7 @@
           </svg><span>linkedin</span>
         </a>
 
-        <a id="github" class="social-link">
+        <a id="github" class="social-link" target="_blank" rel="noopener noreferrer" onclick="linkSound.play()" href="https://github.com/blueberry4airy">
           <svg>
             <g id="SVGRepo_bgCarrier3" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier3" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -405,15 +444,6 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
-
-  <!-- <script defer src="js/preloader.js"></script>
-  <script defer src="js/rotate.js"></script>
-  <script defer src="js/bento-nav.js"></script>
-  <script defer src="js/player.js"></script>
-  <script defer src="js/greeting.js"></script>
-  <script defer src="js/projects.js"></script>
-  <script defer src="js/title-animation.js"></script> -->
 
 
   <script src="dist/js/bundle.js" defer></script>
