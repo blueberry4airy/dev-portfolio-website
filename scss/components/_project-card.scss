@@ -50,6 +50,11 @@
       flex-direction: column;
       justify-content: space-between;
 
+      .grid__box-description {
+        text-align: center;
+        padding: 10%;
+      }
+
       .grid__box-link {
         display: flex;
         justify-content: space-between;

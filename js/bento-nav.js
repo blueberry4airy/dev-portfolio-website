@@ -212,6 +212,28 @@ document.addEventListener('DOMContentLoaded', () => {
     item.addEventListener('mouseenter', shuffleAnimation);
   });
 
+  // Add event listeners to each menu link
+[$homeLink, $homeLink2, $aboutLink, $aboutLink2, $skillsLink, $skillsLink2, $projectsLink, $projectsLink2, $contactsLink, $contactsLink2 ].forEach(link => {
+  link.addEventListener('click', (event) => {
+    // Prevent the default link behavior (page reload)
+    event.preventDefault();
+
+    // Get the href attribute of the clicked link
+    const targetSection = event.currentTarget.getAttribute('href');
+
+    // Navigate to the corresponding section of the page
+    window.location.href = targetSection;
+
+    // Close the overlay by reversing the timeline animation
+   timeline.reverse();
+            $footer.style.display = 'flex';
+            $main.style.display = 'block';
+            $btnWrap.classList.remove('on');
+            $overlayContainer.style.display = 'none';
+  });
+});
+
+
 });
 
 function getRandomCharacter() {
@@ -256,4 +278,6 @@ function shuffleAnimation(event) {
     }
   }, intervalDuration);
 }
+
+
 

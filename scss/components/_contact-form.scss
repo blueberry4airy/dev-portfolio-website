@@ -16,6 +16,20 @@
   &:hover {
     animation-play-state: paused;
   }
+
+  @include sm {
+    width: 100%;
+      padding: 1.5rem .5rem .5rem;
+      pointer-events: none;
+          animation-play-state: paused;
+  }
+
+        @include xs {
+          width: 100%;
+                padding: 1.5rem .5rem .5rem;
+                      pointer-events: none;
+                          animation-play-state: paused;
+        }
 }
 
 .input-box,
@@ -37,16 +51,16 @@
 
     &:valid,
     &:focus {
-      border: 2px solid #000;
+      border: 2px solid $text-color;
       border-radius: 8px;
 
       &~.placeholder {
         transform: translateX(1rem) translateY(-1.5rem);
         font-size: 0.8em;
         padding: 5px 10px;
-        background: #000;
+        background: $text-color;
         letter-spacing: 0.2em;
-        color: #fff;
+        color: $bgr;
         border: 2px;
       }
     }
@@ -67,3 +81,19 @@
 }
 
 
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}

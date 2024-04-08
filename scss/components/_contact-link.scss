@@ -3,6 +3,8 @@
   background: none;
   cursor: pointer;
 
+
+
   &:hover .hover-underline-animation:after {
       transform: scaleX(1);
       transform-origin: bottom left;
@@ -15,6 +17,11 @@
       font-weight: 500;
       padding-right: 15px;
       text-transform: uppercase;
+
+        @include xs {
+      letter-spacing: 0;
+            padding-bottom: 3px;
+          }
     }
 
     & .arrow-horizontal {
@@ -51,6 +58,10 @@
       background-color: $text-color;
       transform-origin: bottom right;
       transition: transform 0.25s ease-out;
+@include xs {
+        height: 1px;
+  }
+
     }
 }
 

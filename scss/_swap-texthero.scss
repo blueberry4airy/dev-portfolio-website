@@ -7,11 +7,21 @@
   margin-bottom: 1.5em;
   max-width: 80%;
 
+  @include xs {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
   &-span {
     display: inline-block;
     font-size: 2rem;
     margin-bottom: 1rem;
     // text-indent: 2em;
+      @include xs {
+          font-size: 1.5rem;
+              text-align: center;
+        }
   }
 
   &#{$_swappable} {
@@ -22,6 +32,9 @@
     display: inline-block;
     opacity: 0;
     transform: translateY(0);
+          @include xs {
+              font-size: 1.5rem;
+            }
 
     &:empty {
       opacity: 0;

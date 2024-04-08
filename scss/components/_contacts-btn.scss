@@ -14,6 +14,13 @@
     transition: 0.2s;
       transition-timing-function: linear;
 
+      @include xs {
+          border: 1px solid $text-color;
+            border-bottom: 3px solid $text-color;
+      }
+
+
+
   &__icon,
   &__text,
   & {
@@ -33,11 +40,18 @@
     width: 2.5rem;
     background-color: $bg-color-grey;
     @include flex();
+
+          @include xs {
+    transform: translateX(97px);
+            }
   }
 
   & svg {
     width: 1.5rem;
     fill: $text-color;
+              @include xs {
+    width: 1.2rem;
+                }
   }
 
     &:hover {
@@ -59,20 +73,3 @@
     }
 }
 
-
-@keyframes float {
-  0% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-  }
-
-  50% {
-    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-    transform: translatey(-20px);
-  }
-
-  100% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-  }
-}

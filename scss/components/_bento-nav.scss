@@ -1,8 +1,10 @@
 .btn-bento__wrap {
   position: relative;
-  // margin: 0 auto;
-  // opacity: 0;
   z-index: 99999;
+
+    @include xs {
+        right: 7%;
+    }
 
   .bento-span {
     position: absolute;
@@ -10,6 +12,8 @@
     opacity: 0;
     transition-duration: .7s;
     text-transform: uppercase;
+
+
 
     // z-index: 98;
   }
@@ -68,8 +72,8 @@
   }
 
   .btn-bento {
-    width: 3vw;
-    height: 3vh;
+    width: 2.5vw;
+    height: 2.5vh;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -83,9 +87,9 @@
     }
 
     .circle {
-      width: .35rem;
-      height: .35rem;
-      margin: .35rem;
+      width: .3rem;
+      height: .3rem;
+      margin: .3rem;
       background: $text-color;
       border-radius: 1rem;
       display: block;
@@ -157,7 +161,25 @@ display: none;
           top: -110%;
           opacity: 0.3;
           position: fixed;
+
+          @include xs {
+            animation-play-state: paused;
+            background-image: none;
+          }
+          @include sm {
+            animation-play-state: paused;
+            background-image: none;
+          }
         }
+
+                                    @include xs {
+          background-image: url('../assets/images/paper-pattern.png');
+
+                                    }
+                                    @include sm {
+          background-image: url('../assets/images/paper-pattern.png');
+
+                                    }
     }
 }
 
@@ -175,6 +197,15 @@ display: none;
   // font-weight: 300;
   font-family: 'Special Elite', sans-serif;
 
+  @include xs {
+        height: 80vh;
+                  color: $text-color;
+  }
+
+  @include sm {
+        height: 80vh;
+                  color: $text-color;
+  }
      .item {
         opacity: 0;
         // -webkit-box-direction: 100%;
@@ -195,6 +226,14 @@ display: none;
             & .img-wrap {
               flex: .5;
             }
+
+            @include xs {
+              pointer-events: none;
+            }
+
+                                                @include sm {
+                                                  pointer-events: none;
+                                                }
           }
 
 
@@ -206,6 +245,13 @@ display: none;
           overflow: hidden;
           flex: 0;
 
+          @include xs {
+            display: none;
+          }
+          @include sm {
+            display: none;
+          }
+
           .img {
             width: 100%;
             height: 100%;
@@ -215,9 +261,38 @@ display: none;
 
         .link {
           text-align: right;
+
+          @include xs {
+            text-align: center;
+            font-size: 1.5rem;
+          }
+          @include sm {
+            text-align: center;
+            font-size: 1.5rem;
+          }
         }
   }
 }
 
 }
 
+@include xs {
+  .home__link-1,
+  .projects__link-1,
+  .skills__link-1,
+  .about__link-1,
+  .contacts__link-1 {
+    display: none;
+  }
+
+}
+@include sm {
+  .home__link-1,
+  .projects__link-1,
+  .skills__link-1,
+  .about__link-1,
+  .contacts__link-1 {
+    display: none;
+  }
+
+}

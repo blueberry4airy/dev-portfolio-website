@@ -1,5 +1,5 @@
 .header {
-  font-size: 1rem;
+  // font-size: 1rem;
 
 
 
@@ -8,6 +8,20 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     position: fixed;
+
+    @include xl {
+      left: 13%;
+    }
+@include xs{
+      background-color: rgba($color: #f1f1f1, $alpha: .5);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+}
+@include sm{
+      background-color: rgba($color: #f1f1f1, $alpha: .5);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+}
   }
 
   &__circular-text {
@@ -17,17 +31,30 @@
     position: relative;
     z-index: 99;
 
+          @include xs {
+              font-size: 12px;
+            }
+
+
+
     .text {
       position: absolute;
       font-weight: 500;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+            @include xs {
+                left: 61%;
+              }
     }
 
     .header__logo {
       position: absolute;
       left: 1%;
+
+      @include xs {
+          padding-left: 3%;
+        }
     }
   }
 
@@ -35,6 +62,5 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
   }
 }

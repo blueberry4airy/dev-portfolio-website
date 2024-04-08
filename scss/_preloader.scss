@@ -75,6 +75,10 @@
   color: $bgr;
     font-size: 2rem;
       font-family: "Special Elite", sans-serif;
+
+      @include xs {
+        font-size: 1.5rem;
+      }
 }
 
 .count {
@@ -95,6 +99,14 @@
   background: url('../assets/images/giphy.gif');
   background-size: cover;
   z-index: -1;
+
+  @include xs {
+    display: none;
+  }
+
+    @include sm {
+      display: none;
+    }
 }
 
 

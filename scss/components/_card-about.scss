@@ -11,10 +11,9 @@
   margin: 0 auto;
   padding: 3rem 2rem 2rem;
   background-color: $bg-color-grey;
-  width: 50%;
-  height: 100%;
-box-shadow: 26px 26px 33px #686868,
-    -26px -26px 33px #ffffff;
+  width: 50vw;
+  height: 50vh;
+box-shadow: 26px 26px 33px #686868;
   border-radius: .5rem;
   transition: 0.5s;
   transform: rotateX(-55deg) rotateY(15deg) rotateZ(60deg);
@@ -24,9 +23,27 @@ box-shadow: 26px 26px 33px #686868,
   &:hover {
       transform: rotate(0deg);
       opacity: 1;
-      box-shadow: -26px -26px 33px #686868,
-          26px 26px 33px #ffffff;
+      box-shadow: -26px -26px 33px #686868
     }
+
+                @include sm {
+                  width: 100%;
+                  height: 100%;
+                  transform: rotate(0deg);
+                  opacity: 1;
+                  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+                  pointer-events: none;
+                  }
+                
+
+                @include xs {
+                  width: 100%;
+                  height: 100%;
+                  transform: rotate(0deg);
+                  // opacity: 1;
+                  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+                  pointer-events: none;
+                }
 }
 
 

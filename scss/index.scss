@@ -1,5 +1,7 @@
 @use "sass:math";
 
+@use 'media-queries.scss' as *;
+
 @import "fonts";
 
 // variables
@@ -10,8 +12,6 @@
 @import "base";
 
 @import "mixins";
-
-@import "display";
 
 @import "preloader";
 
@@ -43,6 +43,10 @@
   display: flex;
   margin-bottom: 13rem;
 
+  @include xs {
+    margin-bottom: 17rem;
+  }
+
   span {
     flex: 1;
     font-size: 7vw;
@@ -53,6 +57,15 @@
     justify-content: center;
     align-items: center;
     letter-spacing: 2.5vw;
+
+    @include xs {
+      font-size: 2.5rem;
+          letter-spacing: 1.5vw;
+    }
+    @include xl {
+      font-size: 5rem;
+
+    }
   }
 }
 
@@ -68,6 +81,7 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   // opacity: 0;
+
 
   &.overlay-opened {
     top: 2%;
@@ -104,6 +118,14 @@ canvas {
   padding: 0 5rem;
   // opacity: 0;
 
+  @include xs{
+      padding: 0;
+  }
+
+        @include sm {
+          padding: 0;
+        }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -122,6 +144,13 @@ canvas {
       "b5 b5 b5 b5 b6 b6"
       "b5 b5 b5 b5 b6 b6"
       "b5 b5 b5 b5 b6 b6";
+
+      @include xs {
+          @include flex();
+          flex-direction: column;
+            width: 100%;
+              height: 100%;
+      }
 
     .b1 {
       grid-area: b1;
@@ -142,13 +171,6 @@ canvas {
       grid-area: b6;
     }
   }
-}
-
-
-
-// skills section
-.skills__section {
-  margin-bottom: 3rem;
 }
 
 
