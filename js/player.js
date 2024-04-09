@@ -1,14 +1,18 @@
 const $canvas = document.querySelector('canvas'),
-  $audio = document.querySelector('#audio'),
-  $switch = document.querySelector('#switch');
+  // lullaby = document.querySelector('#audio'),
+  $switch = document.querySelector('#switch'),
+  $heroText = document.querySelector('.hero__text');
+
+  const lullaby = new Audio();
+  lullaby.src = "../assets/sounds/forest-lullaby.webm";
 
 
   // Function to play the audio and loop it endlessly
 const playAudioLoop = () => {
-  $audio.play();
-  $audio.addEventListener('ended', () => {
-    $audio.currentTime = 0; // Reset the audio to the beginning
-    $audio.play(); // Play the audio again
+  lullaby.play();
+  lullaby.addEventListener('ended', () => {
+    lullaby.currentTime = 0; // Reset the audio to the beginning
+    lullaby.play(); // Play the audio again
   });
 };
 
@@ -65,6 +69,7 @@ const render = () => {
 render();
 
 $canvas.addEventListener('click', () => {
+    clickSound.play();
   opt.power = !opt.power;
 
   if (opt.power) {
@@ -77,7 +82,7 @@ $canvas.addEventListener('click', () => {
       ease: Power2.easeInOut,
     });
   } else {
-    $audio.pause();
+    lullaby.pause();
     $switch.checked = false;
     TweenMax.to(opt, 1, {
       sinHeight: 0,
@@ -108,7 +113,7 @@ $switch.addEventListener('click', () => {
       ease: Power2.easeInOut,
     });
   } else {
-    $audio.pause();
+    lullaby.pause();
     $switch.checked = false;
     TweenMax.to(opt, 1, {
       sinHeight: 0,
@@ -129,3 +134,28 @@ clickSound.src = "../assets/sounds/click-btn .mp3";
 
 
 
+// Options for the Intersection Observer
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1 // Change this threshold value according to your needs
+};
+
+// Callback function for the Intersection Observer
+const handleIntersection = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Header section is in view
+      $canvas.classList.remove('overlay-opened');
+    } else {
+      // Header section is out of view
+      $canvas.classList.add('overlay-opened');
+    }
+  });
+};
+
+// Create Intersection Observer instance
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Start observing the header section
+observer.observe($heroText);

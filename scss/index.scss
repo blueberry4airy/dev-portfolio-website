@@ -1,6 +1,6 @@
 @use "sass:math";
 
-@use 'media-queries.scss' as *;
+@use "media-queries.scss" as *;
 
 @import "fonts";
 
@@ -26,10 +26,8 @@
 @import "components/card-about";
 @import "components/contact-form";
 
-
 @import "text-infinite";
 @import "swap-texthero";
-
 
 /*       hero     */
 
@@ -47,6 +45,17 @@
     margin-bottom: 17rem;
   }
 
+  @include xl {
+    margin-bottom: 17rem;
+  }
+
+  @include md {
+    margin-bottom: 18rem;
+  }
+  @include sm {
+    margin-bottom: 17rem;
+  }
+
   span {
     flex: 1;
     font-size: 7vw;
@@ -60,11 +69,10 @@
 
     @include xs {
       font-size: 2.5rem;
-          letter-spacing: 1.5vw;
+      letter-spacing: 1.5vw;
     }
     @include xl {
       font-size: 5rem;
-
     }
   }
 }
@@ -75,25 +83,31 @@ canvas {
   height: 8vh;
 
   cursor: pointer;
-  // z-index: 1;
+  z-index: 1;
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   // opacity: 0;
 
-
-  &.overlay-opened {
+   &.overlay-opened {
     top: 2%;
-    /* Adjust this value for the desired top position */
     transform: translateX(-50%);
-    width: 10vw;
+    width: 15%;
     position: fixed;
+  }
+
+  @include xl {
+    top: 25%;
+  }
+  @include sm {
+    top: 38%;
+
   }
 }
 
 .hero {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 
   &__introduction {
     display: flex;
@@ -113,18 +127,21 @@ canvas {
 
 // grid  projects section
 
-
 .projects__container {
   padding: 0 5rem;
   // opacity: 0;
 
-  @include xs{
-      padding: 0;
+  @include xs {
+    padding: 0;
+      .projects__title {
+          margin-bottom: 0;
+        }
   }
 
-        @include sm {
-          padding: 0;
-        }
+  @include sm {
+    padding: 0;
+  }
+
 
   .grid {
     display: grid;
@@ -145,12 +162,12 @@ canvas {
       "b5 b5 b5 b5 b6 b6"
       "b5 b5 b5 b5 b6 b6";
 
-      @include xs {
-          @include flex();
-          flex-direction: column;
-            width: 100%;
-              height: 100%;
-      }
+    @include xs {
+      @include flex();
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
 
     .b1 {
       grid-area: b1;
@@ -173,4 +190,6 @@ canvas {
   }
 }
 
-
+.about__section {
+  margin-bottom: 4rem;
+}

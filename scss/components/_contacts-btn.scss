@@ -1,4 +1,4 @@
-.btn {
+.hero__link-1 {
   position: relative;
   width: 10rem;
   height: 3rem;
@@ -13,6 +13,7 @@
     transform: translate(0, -3px);
     transition: 0.2s;
       transition-timing-function: linear;
+      z-index: 1;
 
       @include xs {
           border: 1px solid $text-color;
@@ -24,29 +25,29 @@
   &__icon,
   &__text,
   & {
-    transition: all .3s;
+    transition: all .3s ease-in-out;
   }
 
-  & .btn__text {
+  & .link-1__text {
     transform: translateX(22px);
     color: $text-color;
     font-weight: 500;
   }
 
-  & .btn__icon {
+  & .link-1__icon {
     position: absolute;
-    transform: translateX(109px);
+    transform: translateX(116px);
     height: 100%;
     width: 2.5rem;
     background-color: $bg-color-grey;
     @include flex();
 
           @include xs {
-    transform: translateX(97px);
+    transform: translateX(103px);
             }
   }
 
-  & svg {
+  & .svg {
     width: 1.5rem;
     fill: $text-color;
               @include xs {
@@ -56,20 +57,24 @@
 
     &:hover {
       background: $bg-color-grey;
+          transition: all .3s ease-in-out;
 
-      & .btn__text {
+      & .link-1__text {
           color: transparent;
+              transition: all .3s ease-in-out;
         }
 
-        & .btn__icon {
+        & .link-1__icon {
           width: 9rem;
-          transform: translateX(0);
+          transform: translateX(8px);
+              transition: all .3s ease-in-out;
         }
     }
 
     &:active {
       transform: translate(0, 0);
   border-bottom: 2px solid $text-color;
+      transition: all .3s ease-in-out;
     }
 }
 

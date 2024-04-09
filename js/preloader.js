@@ -1,3 +1,26 @@
+const $preLoader = document.createElement('div'),
+      $loader = document.createElement('div'),
+      $loaderBgr = document.createElement('div'),
+      $loaderContent = document.createElement('div'),
+      $count = document.createElement('span'),
+      $logoCount = document.createElement('p'),
+      $loader2 = document.createElement('div');
+
+      $preLoader.classList.add('pre-loader');
+      $loader.classList.add('loader');
+      $loaderBgr.classList.add('loader-bg');
+      $loaderContent.classList.add('loader-content');
+      $count.classList.add('count');
+      $logoCount.classList.add('copy');
+      $loader2.classList.add('loader-2');
+
+      $preLoader.append($loader, $loaderBgr);
+      $loaderContent.append($count, $logoCount);
+      document.body.append($preLoader, $loaderContent, $loader2);
+         $count.textContent = '0';
+      $logoCount.textContent = 'O.G.FrontDev'
+
+
 document.addEventListener("DOMContentLoaded", () => {
     function startLoader() {
         let counterElement = document.querySelector('.count');
@@ -42,9 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Show site content
         // gsap.to('header, footer, main', {  visibility: 'visible', duration: 1.5, delay: 2 });
+            gsap.to('.pre-loader', {visibility: 'hidden', duration: 2, delay: 2 });
             gsap.to('.loader-content', { visibility: 'hidden', duration: 0.5, delay: 0.5 });
             gsap.to('.loader', { visibility: 'hidden', duration: 0.5, delay: 0.5 });
-              gsap.to('.header, .footer, .section ', { opacity: 1, duration: 1, delay: 2 });
+            gsap.to('.header, .footer, .section ', { opacity: 1, duration: 1, delay: 2 });
 
     }
 

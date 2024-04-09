@@ -2,35 +2,40 @@
   position: absolute;
   top: 40%;
   /* Adjust as needed */
-  left: 94%;
+  left: 93%;
 
   width: 56px;
   height: 56px;
   // @include flex;
-    display: flex;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   // opacity: 0;
 
   @include xs {
-      left: 92%;
-        width: 45px;
-          height: 45px;
-          top: 41%;
-    }
+    left: 90%;
+    width: 45px;
+    height: 45px;
+    top: 41%;
+  }
   @include xl {
-      left: 84%;
-    }
+    left: 84%;
+    top: 25%;
+  }
+
+  @include sm {
+    top: 38%;
+  }
 
   .input {
     display: none;
   }
   .icon {
     // @include flex();
-      display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: transform 500ms;
 
     &-off {

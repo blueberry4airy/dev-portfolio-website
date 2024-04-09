@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // $toggle = document.querySelector('.toggle'),
         $main = document.querySelector('.main');
 
+
   let isOpen = false;
 
   const timeline = gsap.timeline({ paused: true });
@@ -174,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   $btnWrap.addEventListener('click', () => {
+    btnSound.play();
 
     if (isOpen) {
       timeline.reverse();
@@ -185,9 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // $toggle.classList.remove('hidden');
             $overlayContainer.style.display = 'none';
 
-
-
-
     } else {
       timeline.play();
             // $heroHeading.style.display = 'none'; // Remove heading from the DOM when overlay is open
@@ -197,9 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // $toggle.classList.add('hidden');
             $main.style.display = 'none';
             $overlayContainer.style.display = 'block';
-
-
-
     }
 
     isOpen = !isOpen;

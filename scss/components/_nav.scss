@@ -1,41 +1,36 @@
 .header {
   // font-size: 1rem;
 
-
-
   &__container {
     width: 100%;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     position: fixed;
+    left: -23px;
+    background: transparent;
+        @include blur;
 
     @include xl {
       left: 13%;
     }
-@include xs{
-      background-color: rgba($color: #f1f1f1, $alpha: .5);
-        backdrop-filter: blur(10px);
-        z-index: 1;
-}
-@include sm{
-      background-color: rgba($color: #f1f1f1, $alpha: .5);
-        backdrop-filter: blur(10px);
-        z-index: 1;
-}
+    @include xs {
+      @include blur;
+    }
+    @include sm {
+      @include blur;
+    }
   }
 
   &__circular-text {
     flex: 1;
     // opacity: 0;
-    padding-left: 5%;
+    padding-left: 4%;
     position: relative;
     z-index: 99;
 
-          @include xs {
-              font-size: 12px;
-            }
-
-
+    @include xs {
+      font-size: 12px;
+    }
 
     .text {
       position: absolute;
@@ -43,18 +38,18 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-            @include xs {
-                left: 61%;
-              }
+      @include xs {
+        left: 61%;
+      }
     }
 
     .header__logo {
       position: absolute;
-      left: 1%;
+      left: 5%;
 
       @include xs {
-          padding-left: 3%;
-        }
+        padding-left: 3%;
+      }
     }
   }
 

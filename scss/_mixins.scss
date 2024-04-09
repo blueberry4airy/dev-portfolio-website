@@ -10,3 +10,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin blur {
+    background: transparent;
+      backdrop-filter: blur(10px);
+              z-index: 1;
+}

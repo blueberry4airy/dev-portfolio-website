@@ -5,23 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OG.FrontDev</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body class="page">
-  <!-- <div class="container"> -->
-  <div class="pre-loader">
-    <div class="loader"></div>
-    <div class="loader-bg"></div>
-  </div>
-  <div class="loader-content">
-    <span class="count">0</span>
-    <p class="copy">OG.FrontDev</p>
-  </div>
-  <div class="loader-2"></div>
-  <!-- </div> -->
-  <!-- home section -->
   <header class="header">
     <div class="container header__container">
       <nav class="header__nav nav">
@@ -34,16 +23,16 @@
 
         <!-- button bento navigation menu -->
         <div class="btn-bento__wrap">
-          <button onclick="btnSound.play()" id="btnBento" class="btn-bento">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
+          <button  id="btnBento" class="btn-bento">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
           </button>
           <span class="bento-span">Menu</span>
         </div>
@@ -70,10 +59,9 @@
           <span>M</span>
         </h1>
         <!-- volume on off -->
-        <label class="toggle" for="switch" onclick="clickSound.play()">
-          <input id="switch" class="input" type="checkbox">
-          <svg class="icon icon-off" fill="#000000" width="32" height="32" viewBox="0 0 32 32" id="icon"
-          >
+        <label class="toggle" for="switch">
+          <input id="switch" class="input" type="checkbox" aria-label="music switch icon">
+          <svg class="icon icon-off" fill="#000000" width="32" height="32" viewBox="0 0 32 32" id="icon">
             <defs>
               <style>
                 .cls-1 {
@@ -91,8 +79,7 @@
               height="32" />
           </svg>
 
-          <svg class="icon icon-on" fill="#000000" width="32" height="32" viewBox="0 0 32 32" id="icon2"
-          >
+          <svg class="icon icon-on" fill="#000000" width="32" height="32" viewBox="0 0 32 32" id="icon2">
             <defs>
               <style>
                 .cls-1 {
@@ -107,9 +94,7 @@
               height="32" />
           </svg>
         </label>
-        <canvas onclick="clickSound.play()"></canvas>
-        <audio src="/assets/sounds/forest-lullaby.webm" id="audio"></audio>
-
+        <canvas aria-roledescription="music player"></canvas>
         <div class="hero__introduction">
           <span class="hero__text hero__text-swappable"></span>
           <span class="hero__text-span"> I'm Olga Gorincioi</span>
@@ -121,11 +106,11 @@
           </p>
           <!-- </div> -->
           <div class="hero__links">
-            <a href="#" download="CV" class="hero__link-1" onclick="clickSound.play()">
-              <button class="btn" type="button">
-                <span class="btn__text">Resume</span>
-                <span class="btn__icon"><svg viewBox="0 0 35 35"
-                    id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg">
+            <a href="#" download="CV" class="hero__link-1 " onclick="clickSound.play()">
+              <!-- <button class="btn" type="button"> -->
+                <span class="link-1__text">Resume</span>
+                <span class="link-1__icon"><svg viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307"
+                    data-name="Layer 2" class="svg">
                     <path
                       d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
                     </path>
@@ -136,12 +121,11 @@
                       d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
                     </path>
                   </svg></span>
-              </button>
+              <!-- </button> -->
             </a>
-            <a href="mailto: olga.gorincioi@yahoo.com" class="hero__link-2" onclick="linkSound.play()">
+            <a href="mailto:olga.gorincioi@yahoo.com" class="hero__link-2" onclick="linkSound.play()">
               <span class="hover-underline-animation">Contact me !</span>
-              <svg class="arrow-horizontal" width="30" height="10"
-                viewBox="0 0 46 16">
+              <svg class="arrow-horizontal" width="30" height="10" viewBox="0 0 46 16">
                 <path id="Path_10" data-name="Path 10"
                   d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)">
                 </path>
@@ -163,22 +147,21 @@
           <div class="grid__box b1">
             <div class="grid__box-front">
               <span class="grid__box-nr">[01]</span>
-              <h3 class="grid__box-name">Project 1</h3>
+              <h3 class="grid__box-name">Portfolio Website</h3>
             </div>
             <div class="grid__box-back">
               <p class="grid__box-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
-                justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
-                tincidunt augue id, efficitur massa.
+                This is my portfolio website. It was built with Scss and gulp for both scss and JS.
+                Pure Vanilla JavaScript. Please enjoy the music of the red string from my heart to yours.❤️❤️
               </p>
               <div class="grid__box-link">
                 <a href="http://#" target="_blank" rel="noopener noreferrer">View demo page &#8599;</a>
                 <a href="http://#" target="_blank" rel="noopener noreferrer">Github repository &#8599;</a>
               </div>
             </div>
-            <img src="./assets/images/" alt="" class="grid__box-img">
+            <img src="./assets/images/profile.png" alt="portfolio website card image" class="grid__box-img">
           </div>
-          <div class="grid__box b2">
+          <div class="grid__box b2" >
             <div class="grid__box-front">
               <span class="grid__box-nr">[02]</span>
               <h3 class="grid__box-name">Project 2</h3>
@@ -196,7 +179,7 @@
             </div>
             <img src="./assets/images/" alt="" class="grid__box-img">
           </div>
-          <div class="grid__box b3">
+          <div class="grid__box b3" >
             <div class="grid__box-front">
               <span class="grid__box-nr">[03]</span>
               <h3 class="grid__box-name">Project 3</h3>
@@ -214,44 +197,45 @@
             </div>
             <img src="./assets/images/" alt="" class="grid__box-img">
           </div>
-          <div class="grid__box b4">
+          <div class="grid__box b4" >
             <div class="grid__box-front">
               <span class="grid__box-nr">[04]</span>
-              <h3 class="grid__box-name">Project 4</h3>
+              <h3 class="grid__box-name">ToDo App</h3>
             </div>
             <div class="grid__box-back">
               <p class="grid__box-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae
-                justo vel lorem tincidunt ultrices at non nunc. Donec in sapien viverra,
-                tincidunt augue id, efficitur massa.
+                My first app - A To Do list, where you can add, delete or mark as done tasks.
+                It has local storage.
               </p>
               <div class="grid__box-link">
-                <a href="http://#" target="_blank" rel="noopener noreferrer">View demo page &#8599;</a>
-                <a href="http://#" target="_blank" rel="noopener noreferrer">Github repository &#8599;</a>
+                <a href="https://blueberry4airy.github.io/Todo-app" target="_blank" rel="noopener noreferrer">View demo
+                  page &#8599;</a>
+                <a href="https://github.com/blueberry4airy/Todo-app" target="_blank" rel="noopener noreferrer">Github
+                  repository &#8599;</a>
               </div>
             </div>
-            <img src="./assets/images/" alt="" class="grid__box-img">
+            <img src="./assets/images/Todoapp.png" alt="image of a ToDo app" class="grid__box-img">
           </div>
 
-                    <div class="grid__box b5">
-                      <div class="grid__box-front">
-                        <span class="grid__box-nr">[05]</span>
-                        <h3 class="grid__box-name">CRM</h3>
-                      </div>
-                      <div class="grid__box-back">
-                        <p class="grid__box-description">
-                          A CRM for the Skillbus employees to manage the clients data.
-                          Made with vanilla JavaScript
-                        </p>
-                        <div class="grid__box-link">
-                          <span>No demo page</span>
-                          <a href="https://github.com/blueberry4airy/CRM-Skillbus/tree/master" target="_blank"
-                            rel="noopener noreferrer">Github repository &#8599;</a>
-                        </div>
-                      </div>
-                      <img src="./assets/images/skillbus.png" alt="image of the Skillbus project" class="grid__box-img">
-                    </div>
-          <div class="grid__box b6">
+          <div class="grid__box b5" >
+            <div class="grid__box-front">
+              <span class="grid__box-nr">[05]</span>
+              <h3 class="grid__box-name">CRM</h3>
+            </div>
+            <div class="grid__box-back">
+              <p class="grid__box-description">
+                A CRM for the Skillbus employees to manage the clients data.
+                Made with vanilla JavaScript
+              </p>
+              <div class="grid__box-link">
+                <span>No demo page</span>
+                <a href="https://github.com/blueberry4airy/CRM-Skillbus/tree/master" target="_blank"
+                  rel="noopener noreferrer">Github repository &#8599;</a>
+              </div>
+            </div>
+            <img src="./assets/images/skillbus.png" alt="image of the Skillbus project" class="grid__box-img">
+          </div>
+          <div class="grid__box b6" >
             <div class="grid__box-front">
               <span class="grid__box-nr">[06]</span>
               <h3 class="grid__box-name">Project 6</h3>
@@ -283,67 +267,69 @@
         <div class="skills__text">
           <p class="skills__text-1 row"> HTML &#9734; CSS &#9733; JavaScript &#9734; TypeScript &#9733; HTML &#9734; CSS
             &#9733; JavaScript &#9734; TypeScript &#9733; </p>
-          <p class="skills__text-2 row"> Node.JS &#9752; SQL &#9769; React &#9752; Github &#9769; GitLab &#9752; Git &#9769;
+          <p class="skills__text-2 row"> Node.JS &#9752; SQL &#9769; React &#9752; Github &#9769; GitLab &#9752; Git
+            &#9769;
             NodeJS &#9752; SQL &#9769; React &#9752; Github &#9769; GitLab &#9752; Git &#9769; </p>
-          <p class="skills__text-3 row"> Bootstrap &#9882; Bulma &#9798; Figma &#9882; SASS &#9798; VsCode &#9882; Bootstrap
+          <p class="skills__text-3 row"> Bootstrap &#9882; Bulma &#9798; Figma &#9882; SASS &#9798; VsCode &#9882;
+            Bootstrap
             &#9798; Bulma &#9882; Figma &#9798; SASS &#9882; VsCode &#9798; </p>
         </div>
 
 
-<div class="skill-box__wrap">
-  <div class="skill-box">
-    <span class="skill-box__title">HTML</span>
-    <div class="skill-bar">
-      <span class="skill-per html">
-        <span class="tooltip">90%</span>
-      </span>
-    </div>
-  </div>
+        <div class="skill-box__wrap">
+          <div class="skill-box">
+            <span class="skill-box__title">HTML</span>
+            <div class="skill-bar">
+              <span class="skill-per html">
+                <span class="tooltip">90%</span>
+              </span>
+            </div>
+          </div>
 
-  <div class="skill-box">
-    <span class="skill-box__title">CSS</span>
-    <div class="skill-bar">
-      <span class="skill-per css">
-        <span class="tooltip">80%</span>
-      </span>
-    </div>
-  </div>
-  <div class="skill-box">
-    <span class="skill-box__title">JavaScript</span>
-    <div class="skill-bar">
-      <span class="skill-per javascript">
-        <span class="tooltip">60%</span>
-      </span>
-    </div>
-  </div>
-  <div class="skill-box">
-    <span class="skill-box__title">NodeJS</span>
-    <div class="skill-bar">
-      <span class="skill-per nodejs">
-        <span class="tooltip">30%</span>
-      </span>
-    </div>
-  </div>
-  <div class="skill-box">
-    <span class="skill-box__title">TypeScript</span>
-    <div class="skill-bar">
-      <span class="skill-per typescript">
-        <span class="tooltip">30%</span>
-      </span>
-    </div>
-  </div>
-  <div class="skill-box">
-    <span class="skill-box__title">ReactJS</span>
-    <div class="skill-bar">
-      <span class="skill-per react">
-        <span class="tooltip">30%</span>
-      </span>
-    </div>
-  </div>
-</div>
+          <div class="skill-box">
+            <span class="skill-box__title">CSS</span>
+            <div class="skill-bar">
+              <span class="skill-per css">
+                <span class="tooltip">80%</span>
+              </span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <span class="skill-box__title">JavaScript</span>
+            <div class="skill-bar">
+              <span class="skill-per javascript">
+                <span class="tooltip">60%</span>
+              </span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <span class="skill-box__title">NodeJS</span>
+            <div class="skill-bar">
+              <span class="skill-per nodejs">
+                <span class="tooltip">30%</span>
+              </span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <span class="skill-box__title">TypeScript</span>
+            <div class="skill-bar">
+              <span class="skill-per typescript">
+                <span class="tooltip">30%</span>
+              </span>
+            </div>
+          </div>
+          <div class="skill-box">
+            <span class="skill-box__title">ReactJS</span>
+            <div class="skill-bar">
+              <span class="skill-per react">
+                <span class="tooltip">30%</span>
+              </span>
+            </div>
+          </div>
+        </div>
 
 
- </div>
+      </div>
     </section>
 
     <section class="section-reset section about__section" id="about">
@@ -352,28 +338,29 @@
 
         <div class="card">
 
-                <div class="about__text">
-          <p>
-            In the realm of languages, I effortlessly switch between French, Romanian, and Russian, while my dreams
-            often unfold in
-            Korean. Yet, it is the language of code that truly speaks to me, allowing me to express my creativity and
-            bring ideas to
-            life.
-          </p>
-          <p>
-             While JavaScript may have been my initial adversary, it has since become my trusted
-            ally. And
-            though React may present its own set of challenges, I am determined to conquer it, with aspirations of
-            mastering
-            Three.js in the near future.
-          </p>
-          <p>
-            My journey into the tech world may be relatively recent, but the possibilities that lie ahead are boundless.
-          </p>
+          <div class="about__text">
+            <p>
+              In the realm of languages, I effortlessly switch between French, Romanian, and Russian, while my dreams
+              often unfold in
+              Korean. Yet, it is the language of code that truly speaks to me, allowing me to express my creativity and
+              bring ideas to
+              life.
+            </p>
+            <p>
+              While JavaScript may have been my initial adversary, it has since become my trusted
+              ally. And
+              though React may present its own set of challenges, I am determined to conquer it, with aspirations of
+              mastering
+              Three.js in the near future.
+            </p>
+            <p>
+              My journey into the tech world may be relatively recent, but the possibilities that lie ahead are
+              boundless.
+            </p>
 
-          <p>Thank you for taking the time to visit my page. Your support is deeply appreciated.🖤</p>
+            <p>Thank you for taking the time to visit my page. Your support is deeply appreciated.🖤</p>
 
-        </div>
+          </div>
         </div>
 
 
@@ -382,37 +369,105 @@
 
     <section class="section-reset section contact__section" id="contacts">
       <div class="container contact__container">
-        <h2 class="section-title contact__title" data-splitting>
+        <!-- <h2 class="section-title contact__title" data-splitting>
           Contact me! I am open to work
-        </h2>
-<form class="contact-form" action="https://public.herotofu.com/v1/46548dc0-f4d2-11ee-b428-632ee80a2804" method="post" accept-charset="UTF-8">
-            <label class="visually-hidden" for="name">Full name or company name</label>
-            <div class="input-box1">
-              <input class="input" type="text" name="Name" id="name" required="">
-              <span class="placeholder">Name</span>
-            </div>
-            <label class="visually-hidden" for="email">Email address </label>
-            <div class="input-box">
-              <input class="input" type="email" id="email" name="Email" required="">
-              <span class="placeholder">Email</span>
-            </div>
-            <label class="visually-hidden" for="message">Your message</label>
-            <div class="input-box">
-              <textarea class="input textarea" id="message" name="Message" required="" rows="5"></textarea>
-              <span class="placeholder">Message</span>
-            </div>
-            <button class="contact-btn btn" type="submit" onclick="clickSound.play()">
-                              <span class="btn__text">Resume</span>
-                              <span class="btn__icon">
-                              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none">
-                                <path
-                                  d="M20.7639 12H10.0556M3 8.00003H5.5M4 12H5.5M4.5 16H5.5M9.96153 12.4896L9.07002 15.4486C8.73252 16.5688 8.56376 17.1289 8.70734 17.4633C8.83199 17.7537 9.08656 17.9681 9.39391 18.0415C9.74792 18.1261 10.2711 17.8645 11.3175 17.3413L19.1378 13.4311C20.059 12.9705 20.5197 12.7402 20.6675 12.4285C20.7961 12.1573 20.7961 11.8427 20.6675 11.5715C20.5197 11.2598 20.059 11.0295 19.1378 10.5689L11.3068 6.65342C10.2633 6.13168 9.74156 5.87081 9.38789 5.95502C9.0808 6.02815 8.82627 6.24198 8.70128 6.53184C8.55731 6.86569 8.72427 7.42461 9.05819 8.54246L9.96261 11.5701C10.0137 11.7411 10.0392 11.8266 10.0493 11.9137C10.0583 11.991 10.0582 12.069 10.049 12.1463C10.0387 12.2334 10.013 12.3188 9.96153 12.4896Z"
-                                  stroke="#1d1d1d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                              </span>
-            </button>
-          </form>
+        </h2> -->
+        <form class="contact-form" action="https://public.herotofu.com/v1/46548dc0-f4d2-11ee-b428-632ee80a2804"
+          method="post" accept-charset="UTF-8">
+          <label class="visually-hidden" for="name">Full name or company name</label>
+          <div class="input-box1">
+            <input class="input" type="text" name="Name" id="name" required="">
+            <span class="placeholder">Name</span>
+          </div>
+          <label class="visually-hidden" for="email">Email address </label>
+          <div class="input-box">
+            <input class="input" type="email" id="email" name="Email" required="">
+            <span class="placeholder">Email</span>
+          </div>
+          <label class="visually-hidden" for="message">Your message</label>
+          <div class="input-box">
+            <textarea class="input textarea" id="message" name="Message" required="" rows="5"></textarea>
+            <span class="placeholder">Message</span>
+          </div>
+          <button class="hero__link-1" type="submit" onclick="clickSound.play()">
+            <span class="link-1__text">Resume</span>
+            <span class="link-1__icon">
+              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" class="svg">
+                <path
+                  d="M20.7639 12H10.0556M3 8.00003H5.5M4 12H5.5M4.5 16H5.5M9.96153 12.4896L9.07002 15.4486C8.73252 16.5688 8.56376 17.1289 8.70734 17.4633C8.83199 17.7537 9.08656 17.9681 9.39391 18.0415C9.74792 18.1261 10.2711 17.8645 11.3175 17.3413L19.1378 13.4311C20.059 12.9705 20.5197 12.7402 20.6675 12.4285C20.7961 12.1573 20.7961 11.8427 20.6675 11.5715C20.5197 11.2598 20.059 11.0295 19.1378 10.5689L11.3068 6.65342C10.2633 6.13168 9.74156 5.87081 9.38789 5.95502C9.0808 6.02815 8.82627 6.24198 8.70128 6.53184C8.55731 6.86569 8.72427 7.42461 9.05819 8.54246L9.96261 11.5701C10.0137 11.7411 10.0392 11.8266 10.0493 11.9137C10.0583 11.991 10.0582 12.069 10.049 12.1463C10.0387 12.2334 10.013 12.3188 9.96153 12.4896Z"
+                  stroke="#1d1d1d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+        </form>
+
+        <div class="contact-wrap">
+          <h2 class="section-title contact__title ">
+            Let's <span class="contact__title-span">chat</span> -  I am open to work
+          </h2>
+          <p class="contact-text">I aim to challenge the boundaries of my cognitive capabilities to craft exceptional,
+            responsive, and accessible
+            interactive experiences.</p>
+          <ul class="social-list">
+            <li class="social-item">
+              <a class="social-item__link" href="https://www.linkedin.com/in/olgagorincioi/" aria-label="LinkedIn"
+                data-social="linkedin" target="_blank" rel="noopener noreferrer">
+                <div class="filled"></div>
+                <svg width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"
+                  xml:space="preserve">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+              <div class="social-item__tooltip">LinkedIn</div>
+            </li>
+            <li class="social-item">
+              <a class="social-item__link" href="https://github.com/blueberry4airy" aria-label="GitHub"
+                data-social="github" target="_blank" rel="noopener noreferrer">
+                <div class="filled"></div>
+                <svg width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"
+                  xml:space="preserve">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+              <div class="social-item__tooltip">GitHub</div>
+            </li>
+            <li class="social-item">
+              <a class="social-item__link" href="https://www.instagram.com/frontdev_4airy_olga.gorincioi"
+                aria-label="Instagram" data-social="instagram" target="_blank" rel="noopener noreferrer">
+                <div class="filled"></div>
+                <svg width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"
+                  xml:space="preserve">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+              <div class="social-item__tooltip">Instagram</div>
+            </li>
+            <li class="social-item">
+              <a class="social-item__link" href="https://www.facebook.com/profile.php?id=100004179046367"
+                aria-label="Facebook" data-social="facebook" target="_blank" rel="noopener noreferrer">
+                <div class="filled"></div>
+                <svg height="16" width="16" viewBox="0 0 408.788 408.788" xml:space="preserve" fill="currentColor"
+                  class="bi bi-facebook">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path style="fill:currentColor;"
+                      d="M353.701,0H55.087C24.665,0,0.002,24.662,0.002,55.085v298.616c0,30.423,24.662,55.085,55.085,55.085 h147.275l0.251-146.078h-37.951c-4.932,0-8.935-3.988-8.954-8.92l-0.182-47.087c-0.019-4.959,3.996-8.989,8.955-8.989h37.882 v-45.498c0-52.8,32.247-81.55,79.348-81.55h38.65c4.945,0,8.955,4.009,8.955,8.955v39.704c0,4.944-4.007,8.952-8.95,8.955 l-23.719,0.011c-25.615,0-30.575,12.172-30.575,30.035v39.389h56.285c5.363,0,9.524,4.683,8.892,10.009l-5.581,47.087 c-0.534,4.506-4.355,7.901-8.892,7.901h-50.453l-0.251,146.078h87.631c30.422,0,55.084-24.662,55.084-55.084V55.085 C408.786,24.662,384.124,0,353.701,0z">
+                    </path>
+                  </g>
+                </svg>
+              </a>
+              <div class="social-item__tooltip">Facebook</div>
+            </li>
+          </ul>
         </div>
+      </div>
 
     </section>
 
@@ -421,74 +476,6 @@
   <footer class="footer">
     <div class="container footer__container">
       <span class="copyright">© 2024 by Olga Gorincioi</span>
-
-      <div class="social-links">
-        <a id="facebook" class="social-link" target="_blank" rel="noopener noreferrer" onclick="linkSound.play()" href="https://www.facebook.com/profile.php?id=100004179046367">
-          <svg>
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z">
-              </path>
-            </g>
-          </svg><span>facebook</span>
-        </a>
-
-        <a id="instagram" class="social-link" target="_blank" rel="noopener noreferrer" onclick="linkSound.play()" href="https://www.instagram.com/frontdev_4airy_olga.gorincioi">
-          <svg>
-            <g id="SVGRepo_bgCarrier1" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier1" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier1">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z">
-              </path>
-              <path
-                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z">
-              </path>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z">
-              </path>
-            </g>
-          </svg><span>instagram</span>
-        </a>
-
-        <a id="linkedin" class="social-link" target="_blank" rel="noopener noreferrer" onclick="linkSound.play()" href="https://www.linkedin.com/in/olgagorincioi/">
-          <svg>
-            <g id="SVGRepo_bgCarrier2" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier2" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier2">
-              <path
-                d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z">
-              </path>
-              <path
-                d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z">
-              </path>
-              <path
-                d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z">
-              </path>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z">
-              </path>
-            </g>
-          </svg><span>linkedin</span>
-        </a>
-
-        <a id="github" class="social-link" target="_blank" rel="noopener noreferrer" onclick="linkSound.play()" href="https://github.com/blueberry4airy">
-          <svg>
-            <g id="SVGRepo_bgCarrier3" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier3" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier3">
-              <path
-                d="M4.0744 2.9938C4.13263 1.96371 4.37869 1.51577 5.08432 1.15606C5.84357 0.768899 7.04106 0.949072 8.45014 1.66261C9.05706 1.97009 9.11886 1.97635 10.1825 1.83998C11.5963 1.65865 13.4164 1.65929 14.7213 1.84164C15.7081 1.97954 15.7729 1.97265 16.3813 1.66453C18.3814 0.651679 19.9605 0.71795 20.5323 1.8387C20.8177 2.39812 20.8707 3.84971 20.6494 5.04695C20.5267 5.71069 20.5397 5.79356 20.8353 6.22912C22.915 9.29385 21.4165 14.2616 17.8528 16.1155C17.5801 16.2574 17.3503 16.3452 17.163 16.4167C16.5879 16.6363 16.4133 16.703 16.6247 17.7138C16.7265 18.2 16.8491 19.4088 16.8973 20.4002C16.9844 22.1922 16.9831 22.2047 16.6688 22.5703C16.241 23.0676 15.6244 23.076 15.2066 22.5902C14.9341 22.2734 14.9075 22.1238 14.9075 20.9015C14.9075 19.0952 14.7095 17.8946 14.2417 16.8658C13.6854 15.6415 14.0978 15.185 15.37 14.9114C17.1383 14.531 18.5194 13.4397 19.2892 11.8146C20.0211 10.2698 20.1314 8.13501 18.8082 6.83668C18.4319 6.3895 18.4057 5.98446 18.6744 4.76309C18.7748 4.3066 18.859 3.71768 18.8615 3.45425C18.8653 3.03823 18.8274 2.97541 18.5719 2.97541C18.4102 2.97541 17.7924 3.21062 17.1992 3.49805L16.2524 3.95695C16.1663 3.99866 16.07 4.0147 15.975 4.0038C13.5675 3.72746 11.2799 3.72319 8.86062 4.00488C8.76526 4.01598 8.66853 3.99994 8.58215 3.95802L7.63585 3.49882C7.04259 3.21087 6.42482 2.97541 6.26317 2.97541C5.88941 2.97541 5.88379 3.25135 6.22447 4.89078C6.43258 5.89203 6.57262 6.11513 5.97101 6.91572C5.06925 8.11576 4.844 9.60592 5.32757 11.1716C5.93704 13.1446 7.4295 14.4775 9.52773 14.9222C10.7926 15.1903 11.1232 15.5401 10.6402 16.9905C10.26 18.1319 10.0196 18.4261 9.46707 18.4261C8.72365 18.4261 8.25796 17.7821 8.51424 17.1082C8.62712 16.8112 8.59354 16.7795 7.89711 16.5255C5.77117 15.7504 4.14514 14.0131 3.40172 11.7223C2.82711 9.95184 3.07994 7.64739 4.00175 6.25453C4.31561 5.78028 4.32047 5.74006 4.174 4.83217C4.09113 4.31822 4.04631 3.49103 4.0744 2.9938Z">
-              </path>
-              <path
-                d="M3.33203 15.9454C3.02568 15.4859 2.40481 15.3617 1.94528 15.6681C1.48576 15.9744 1.36158 16.5953 1.66793 17.0548C1.8941 17.3941 2.16467 17.6728 2.39444 17.9025C2.4368 17.9449 2.47796 17.9858 2.51815 18.0257C2.71062 18.2169 2.88056 18.3857 3.05124 18.5861C3.42875 19.0292 3.80536 19.626 4.0194 20.6962C4.11474 21.1729 4.45739 21.4297 4.64725 21.5419C4.85315 21.6635 5.07812 21.7352 5.26325 21.7819C5.64196 21.8774 6.10169 21.927 6.53799 21.9559C7.01695 21.9877 7.53592 21.998 7.99999 22.0008C8.00033 22.5527 8.44791 23.0001 8.99998 23.0001C9.55227 23.0001 9.99998 22.5524 9.99998 22.0001V21.0001C9.99998 20.4478 9.55227 20.0001 8.99998 20.0001C8.90571 20.0001 8.80372 20.0004 8.69569 20.0008C8.10883 20.0026 7.34388 20.0049 6.67018 19.9603C6.34531 19.9388 6.07825 19.9083 5.88241 19.871C5.58083 18.6871 5.09362 17.8994 4.57373 17.2891C4.34391 17.0194 4.10593 16.7834 3.91236 16.5914C3.87612 16.5555 3.84144 16.5211 3.80865 16.4883C3.5853 16.265 3.4392 16.1062 3.33203 15.9454Z">
-              </path>
-            </g>
-          </svg><span>github</span>
-        </a>
-      </div>
     </div>
   </footer>
 
