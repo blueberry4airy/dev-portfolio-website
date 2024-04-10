@@ -3,7 +3,7 @@ const $canvas = document.querySelector('canvas'),
   $switch = document.querySelector('#switch'),
   $heroText = document.querySelector('.hero__text');
 
-  const lullaby = new Audio("/sounds/forest-lullaby.webm");
+  const lullaby = new Audio("sounds/forest-lullaby.webm");
   // lullaby.src = "/assets/sounds/forest-lullaby.webm";
 
 
@@ -119,7 +119,7 @@ $switch.addEventListener('click', () => {
 });
 
 
-const clickSound = new Audio("/sounds/click-btn .mp3");
+const clickSound = new Audio("sounds/click-btn .mp3");
 
 
 
