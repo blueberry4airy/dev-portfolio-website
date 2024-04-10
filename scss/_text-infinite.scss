@@ -76,6 +76,7 @@ box-shadow: 0px -20px 30px -36px rgba(0, 0, 0, 0.45),
     @include flex();
       flex-direction: column;
       gap: 1.5rem;
+      font-size: 1.5rem;
 
       @include sm {
         max-width: 100%;

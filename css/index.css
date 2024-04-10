@@ -173,7 +173,7 @@ img {
 .loader::after {
   content: "";
   animation: grain 8s steps(10) infinite;
-  background-image: url("/images/paper-pattern.png");
+  background-image: url("images/paper-pattern.png");
   height: 300%;
   width: 300%;
   left: -50%;
@@ -250,7 +250,7 @@ img {
   width: 100%;
   height: 100%;
   display: block;
-  background: url("/images/giphy.gif");
+  background: url("images/giphy.gif");
   background-size: cover;
   z-index: -1;
 }
@@ -457,7 +457,7 @@ img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   margin-right: -2px;
-  background-image: url("/images/paper-pattern.png");
+  background-image: url("images/paper-pattern.png");
 }
 .overlay-container .overlay-menu {
   position: fixed;
@@ -576,8 +576,8 @@ img {
   top: 40%;
   /* Adjust as needed */
   left: 92%;
-  width: 56px;
-  height: 56px;
+  width: 59px;
+  height: 59px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -643,6 +643,7 @@ img {
 .hero__link-2 .hover-underline-animation {
   padding-bottom: 7px;
   letter-spacing: 1px;
+  font-size: 1.1rem;
   font-weight: 500;
   padding-right: 15px;
   text-transform: uppercase;
@@ -1079,7 +1080,7 @@ img {
 }
 .btn__form .btn__form-icon {
   position: absolute;
-  transform: translateX(116px);
+  transform: translateX(125px);
   height: 100%;
   width: 2.5rem;
   background-color: #dedede;
@@ -1354,6 +1355,7 @@ img {
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
+  font-size: 1.5rem;
 }
 @media screen and (min-width: 600px) and (max-width: 959px) {
   .skill-box__wrap {
@@ -1450,7 +1452,7 @@ img {
   }
 }
 .hero__text {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.5rem;
   margin-bottom: 1.5em;
   max-width: 80%;
@@ -1459,12 +1461,12 @@ img {
   .hero__text {
     max-width: 100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 }
 .hero__text-span {
   display: inline-block;
-  font-size: 2rem;
+  font-size: 2.1rem;
   margin-bottom: 1rem;
 }
 @media screen and (max-width: 599px) {
@@ -1475,7 +1477,7 @@ img {
 }
 .hero__text.hero__text-swappable {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #930000;
   position: relative;
   display: inline-block;
@@ -1544,22 +1546,7 @@ img {
 
 .hero__heading {
   display: flex;
-  margin-bottom: 16rem;
-}
-@media screen and (max-width: 599px) {
-  .hero__heading {
-    margin-bottom: 17rem;
-  }
-}
-@media screen and (min-width: 960px) and (max-width: 1279px) {
-  .hero__heading {
-    margin-bottom: 18rem;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 959px) {
-  .hero__heading {
-    margin-bottom: 17rem;
-  }
+  margin-bottom: 17rem;
 }
 .hero__heading span {
   flex: 1;

@@ -39,18 +39,7 @@
 
 .hero__heading {
   display: flex;
-  margin-bottom: 16rem;
-
-  @include xs {
-    margin-bottom: 17rem;
-  }
-
-  @include md {
-    margin-bottom: 18rem;
-  }
-  @include sm {
-    margin-bottom: 17rem;
-  }
+  margin-bottom: 17rem;
 
   span {
     flex: 1;
@@ -109,7 +98,8 @@ canvas {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    // opacity: 0;
+
+
   }
 
   &__links {
