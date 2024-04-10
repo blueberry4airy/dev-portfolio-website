@@ -16,7 +16,7 @@
   &::after{
     content: "";
     animation: grain 8s steps(10) infinite;
-    background-image: url('images/paper-pattern.png');
+    background-image: url('/images/paper-pattern.png');
       height: 300%;
       width: 300%;
       left: -50%;
@@ -96,7 +96,7 @@
 .loader-bg {
   @include base();
   display: block;
-  background: url('images/giphy.gif');
+  background: url('/images/giphy.gif');
   background-size: cover;
   z-index: -1;
 
