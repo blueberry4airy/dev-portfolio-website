@@ -6,8 +6,7 @@ $btnWrap.addEventListener('click',function () {
 })
 
 // sound nav btn click
-let btnSound = new Audio();
-btnSound.src = "../assets/sounds/menu.mp3";
+let btnSound = new Audio("/sounds/menu.mp3");
 
 
 //navigation-overlay
@@ -128,15 +127,15 @@ $skillsLink2.textContent = 'my stack';
 $projectsLink2.textContent = 'my work';
 $contactsLink2.textContent = "Let's get in touch!";
 
-$homeImg.src = '../assets/images/home.gif'
-$aboutImg.src = '../assets/images/about.gif'
-$skillsImg.src = '../assets/images/skills.gif'
-$projectsImg.src = '../assets/images/projects.gif'
-$contactsImg.src = '../assets/images/contacts.gif'
+$homeImg.src = '/images/home.gif'
+$aboutImg.src = '/images/about.gif'
+$skillsImg.src = '/images/skills.gif'
+$projectsImg.src = '/images/projects.gif'
+$contactsImg.src = '/images/contacts.gif'
 
 // soudn page turn for the link
-const linkSound = new Audio();
-linkSound.src = "../assets/sounds/page-turn.webm";
+const linkSound = new Audio("/sounds/page-turn.webm");
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

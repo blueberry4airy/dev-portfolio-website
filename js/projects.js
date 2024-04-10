@@ -25,7 +25,7 @@ animateBoxes = () => {
           otherBox.style.transform = 'scale(0.4)';
         } else {
           otherBox.style.filter = 'grayscale(0)';
-          otherBox.style.transform = 'scale(0.8)';
+          otherBox.style.transform = 'scale(0.9)';
         }
       });
     });
@@ -33,7 +33,7 @@ animateBoxes = () => {
     box.addEventListener('mouseleave', () => {
       $gridBox.forEach((otherBox) => {
           otherBox.style.filter = 'grayscale(0)';
-          otherBox.style.transform = 'scale(0.8)';
+          otherBox.style.transform = 'scale(0.7)';
       })
     })
   })

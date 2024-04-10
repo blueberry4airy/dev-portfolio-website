@@ -3,7 +3,8 @@
 
   .about__text p {
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -11,14 +12,18 @@
   margin: 0 auto;
   padding: 3rem 2rem 2rem;
   background-color: $bg-color-grey;
-  width: 50vw;
-  height: 50vh;
+  width: 50%;
+  height: 50%;
 box-shadow: 26px 26px 33px #686868;
   border-radius: .5rem;
   transition: 0.5s;
   transform: rotateX(-55deg) rotateY(15deg) rotateZ(60deg);
   font-weight: 300;
   @include flex();
+
+  @include xs {
+    padding: 2rem 1rem 1rem;
+  }
 
   &:hover {
       transform: rotate(0deg);
@@ -34,7 +39,7 @@ box-shadow: 26px 26px 33px #686868;
                   box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
                   pointer-events: none;
                   }
-                
+
 
                 @include xs {
                   width: 100%;

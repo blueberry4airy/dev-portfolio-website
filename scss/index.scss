@@ -39,13 +39,9 @@
 
 .hero__heading {
   display: flex;
-  margin-bottom: 13rem;
+  margin-bottom: 16rem;
 
   @include xs {
-    margin-bottom: 17rem;
-  }
-
-  @include xl {
     margin-bottom: 17rem;
   }
 
