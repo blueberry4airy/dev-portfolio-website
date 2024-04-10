@@ -128,68 +128,17 @@ canvas {
 // grid  projects section
 
 .projects__container {
-  padding: 0 5rem;
-  // opacity: 0;
-
-  @include xs {
-    padding: 0;
-      .projects__title {
-          margin-bottom: 0;
-        }
-  }
-
-  @include sm {
-    padding: 0;
-  }
-
-
   .grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 10rem);
-    width: inherit;
-    height: inherit;
-    overflow: hidden;
-    grid-auto-flow: row;
-
-    grid-template-areas:
-      "b1 b1 b1 b1 b2 b2"
-      "b1 b1 b1 b1 b2 b2"
-      "b3 b3 b4 b4 b2 b2"
-      "b3 b3 b4 b4 b2 b2"
-      "b5 b5 b5 b5 b6 b6"
-      "b5 b5 b5 b5 b6 b6"
-      "b5 b5 b5 b5 b6 b6"
-      "b5 b5 b5 b5 b6 b6";
-
-    @include xs {
       @include flex();
-      flex-direction: column;
       width: 100%;
       height: 100%;
-    }
-
-    .b1 {
-      grid-area: b1;
-    }
-    .b2 {
-      grid-area: b2;
-    }
-    .b3 {
-      grid-area: b3;
-    }
-    .b4 {
-      grid-area: b4;
-    }
-    .b5 {
-      grid-area: b5;
-    }
-    .b6 {
-      grid-area: b6;
-    }
-  }
+    flex-wrap: wrap;
+    //  @include xs {
+    //   flex-direction: column;
+    //  }
+}
 }
 
 .about__section {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }

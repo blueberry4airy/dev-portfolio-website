@@ -95,6 +95,92 @@
   }
 }
 
+// button form
+.btn__form {
+  position: relative;
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid $text-color;
+  border-bottom: 5px solid $text-color;
+  background-color: $bgr;
+  border-radius: .5rem;
+  overflow: hidden;
+  transform: translate(0, -3px);
+  transition: 0.2s;
+  transition-timing-function: linear;
+  z-index: 1;
+
+  @include xs {
+    border: 1px solid $text-color;
+    border-bottom: 3px solid $text-color;
+  }
+
+
+
+  &-icon,
+  &-text,
+  & {
+    transition: all .3s ease-in-out;
+  }
+
+  & .btn__form-text {
+    transform: translateX(22px);
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  & .btn__form-icon {
+    position: absolute;
+    transform: translateX(116px);
+    height: 100%;
+    width: 2.5rem;
+    background-color: $bg-color-grey;
+    @include flex();
+
+    @include xs {
+      transform: translateX(96px);
+    }
+  }
+
+  & .svg {
+    width: 1.5rem;
+    fill: $text-color;
+
+    @include xs {
+      width: 1.2rem;
+    }
+  }
+
+  &:hover {
+    background: $bg-color-grey;
+    transition: all .3s ease-in-out;
+
+    & .btn__form-text {
+      color: transparent;
+      transition: all .3s ease-in-out;
+    }
+
+    & .btn__form-icon {
+      width: 9rem;
+      transform: translateX(8px);
+      transition: all .3s ease-in-out;
+
+      @include xs {
+        transform: translateX(-2px);
+      }
+    }
+  }
+
+  &:active {
+    transform: translate(0, 0);
+    border-bottom: 2px solid $text-color;
+    transition: all .3s ease-in-out;
+  }
+}
+
 
 @keyframes float {
   0% {

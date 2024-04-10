@@ -56,6 +56,7 @@ img {
   background-color: $bgr;
   // background: linear-gradient(90deg, rgba(29, 29, 29, 0.2) 15%, rgba(0, 0, 0, 0.1) 46%, rgba(159, 158, 154, 1) 83%);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .container {
@@ -90,7 +91,7 @@ img {
           }
 
           @include xs {
-            font-size: 2rem;
+            font-size: 1.5rem;
           }
 }
 

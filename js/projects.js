@@ -33,7 +33,7 @@ animateBoxes = () => {
     box.addEventListener('mouseleave', () => {
       $gridBox.forEach((otherBox) => {
           otherBox.style.filter = 'grayscale(0)';
-          otherBox.style.transform = 'scale(0.6)';
+          otherBox.style.transform = 'scale(0.8)';
       })
     })
   })

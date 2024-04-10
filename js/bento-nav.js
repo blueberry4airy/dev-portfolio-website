@@ -199,14 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     isOpen = !isOpen;
-  });
 
-  //menu words storm
-  const $items = document.querySelectorAll('.item');
 
-  $items.forEach((item) => {
-    item.addEventListener('mouseenter', shuffleAnimation);
-  });
 
   // Add event listeners to each menu link
 [$homeLink, $homeLink2, $aboutLink, $aboutLink2, $skillsLink, $skillsLink2, $projectsLink, $projectsLink2, $contactsLink, $contactsLink2 ].forEach(link => {
@@ -218,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetSection = event.currentTarget.getAttribute('href');
 
     // Navigate to the corresponding section of the page
-    window.location.href = targetSection;
+    window.location = targetSection;
 
     // Close the overlay by reversing the timeline animation
    timeline.reverse();
@@ -228,7 +222,14 @@ document.addEventListener('DOMContentLoaded', () => {
             $overlayContainer.style.display = 'none';
   });
 });
+  });
 
+  //menu words storm
+  const $items = document.querySelectorAll('.item');
+
+  $items.forEach((item) => {
+    item.addEventListener('mouseenter', shuffleAnimation);
+  });
 
 });
 

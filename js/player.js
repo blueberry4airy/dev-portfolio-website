@@ -93,12 +93,6 @@ $canvas.addEventListener('click', () => {
 });
 
 
-// change position when navigation opened
-// const $btnBentoWrap = document.querySelector('.btn-bento__wrap');
-
-
-
-
 // Event listener to play music when switch is clicked
 $switch.addEventListener('click', () => {
  opt.power = !opt.power;
@@ -122,11 +116,6 @@ $switch.addEventListener('click', () => {
     });
   }
 });
-
-// Event listener to toggle canvas position when overlay is opened/closed
-// $btnBentoWrap.addEventListener('click', () => {
-//     $canvas.classList.toggle('overlay-opened');
-// });
 
 
 const clickSound = new Audio();

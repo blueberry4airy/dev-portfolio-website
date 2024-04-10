@@ -2,29 +2,29 @@
   // font-size: 1rem;
 
   &__container {
-    width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+        width: calc(100% - 1.2rem); // Adjust width according to your design
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        margin: 0 auto; // Center the container horizontally
+
+    // width: 100%;
+    // padding-top: 2rem;
+    // padding-bottom: 3rem;
     position: fixed;
-    left: -23px;
+    // left: -23px;
     background: transparent;
         @include blur;
-
-    @include xl {
-      left: 13%;
-    }
-    @include xs {
-      @include blur;
-    }
-    @include sm {
-      @include blur;
-    }
+            @include xs {
+                  width: calc(100% - 1.7rem)
+              }
   }
 
+
+
   &__circular-text {
-    flex: 1;
+    // flex-grow: 1;
     // opacity: 0;
-    padding-left: 4%;
+    // padding-left: 4%;
     position: relative;
     z-index: 99;
 
@@ -35,22 +35,22 @@
     .text {
       position: absolute;
       font-weight: 500;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      @include xs {
-        left: 61%;
-      }
+      top: -145%;
+      left: 53%;
+      // transform: translate(-50%, -50%);
+      // @include xs {
+      //   left: 61%;
+      // }
     }
 
-    .header__logo {
-      position: absolute;
-      left: 5%;
+    // .header__logo {
+    //   position: relative;
+    //   left: 0;
 
-      @include xs {
-        padding-left: 3%;
-      }
-    }
+    //   // @include xs {
+    //   //   padding-left: 3%;
+    //   // }
+    // }
   }
 
   &__nav {
