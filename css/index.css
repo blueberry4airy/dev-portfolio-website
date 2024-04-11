@@ -887,6 +887,11 @@ img {
   padding-bottom: 1.1rem;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 599px) {
+  .about__container .about__text p {
+    font-size: 1rem;
+  }
+}
 
 .card {
   margin: 0 auto;
@@ -1367,6 +1372,7 @@ img {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+    font-size: 1.2rem;
   }
 }
 .skill-box__wrap .skill-box {
@@ -1454,7 +1460,6 @@ img {
   line-height: 1.5rem;
   margin-bottom: 1.5em;
   max-width: 80%;
-  padding-top: 2rem;
 }
 @media screen and (max-width: 599px) {
   .hero__text {
@@ -1466,7 +1471,6 @@ img {
 .hero__text-span {
   display: inline-block;
   font-size: 2.1rem;
-  margin-bottom: 1rem;
 }
 @media screen and (max-width: 599px) {
   .hero__text-span {
@@ -1549,7 +1553,7 @@ img {
 
 .hero__heading {
   display: flex;
-  margin-bottom: 15.5rem;
+  margin-bottom: 13rem;
 }
 @media screen and (min-width: 600px) and (max-width: 959px) {
   .hero__heading {

@@ -5,6 +5,10 @@
     text-align: center;
     padding-bottom: 1.1rem;
     font-size: 1.2rem;
+
+      @include xs {
+    font-size: 1rem;
+        }
   }
 }
 
