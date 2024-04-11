@@ -457,7 +457,7 @@ img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   margin-right: -2px;
-  background-image: url("/images/paper-pattern.png");
+  background-image: url("../images/paper-pattern.png");
 }
 .overlay-container .overlay-menu {
   position: fixed;
