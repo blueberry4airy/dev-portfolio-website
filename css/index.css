@@ -450,13 +450,12 @@ img {
 .overlay-container .overlay .block {
   flex: 1;
   height: 100%;
-  background: #1d1d1d;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   margin-right: -2px;
-  background-color: #dedede;
+  background-image: url("../images/paper-pattern.png");
 }
 .overlay-container .overlay-menu {
   position: fixed;
