@@ -456,7 +456,7 @@ img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   margin-right: -2px;
-  background-image: url("../../images/paper-pattern.png");
+  background-color: #dedede;
 }
 .overlay-container .overlay-menu {
   position: fixed;
@@ -1455,6 +1455,7 @@ img {
   line-height: 1.5rem;
   margin-bottom: 1.5em;
   max-width: 80%;
+  padding-top: 2rem;
 }
 @media screen and (max-width: 599px) {
   .hero__text {
