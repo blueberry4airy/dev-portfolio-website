@@ -32,6 +32,10 @@
 /*       hero     */
 
 // hero section
+
+.hero__section {
+  margin-bottom: 4rem
+}
 .hero__container {
   @include flex();
   flex-direction: column;
@@ -39,7 +43,13 @@
 
 .hero__heading {
   display: flex;
+  margin-bottom: 13rem;
+@include sm {
   margin-bottom: 17rem;
+}
+@include xs {
+  margin-bottom: 17rem;
+}
 
   span {
     flex: 1;

@@ -279,7 +279,7 @@ img {
 
 .header__container {
   width: calc(100% - 1.2rem);
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 2rem;
   margin: 0 auto;
   position: fixed;
@@ -457,7 +457,7 @@ img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   margin-right: -2px;
-  background-image: url("../../images/paper-pattern.png");
+  background-image: url("/images/paper-pattern.png");
 }
 .overlay-container .overlay-menu {
   position: fixed;
@@ -1537,6 +1537,10 @@ img {
 }
 
 /*       hero     */
+.hero__section {
+  margin-bottom: 4rem;
+}
+
 .hero__container {
   display: flex;
   justify-content: center;
@@ -1546,7 +1550,17 @@ img {
 
 .hero__heading {
   display: flex;
-  margin-bottom: 17rem;
+  margin-bottom: 13rem;
+}
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  .hero__heading {
+    margin-bottom: 17rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .hero__heading {
+    margin-bottom: 17rem;
+  }
 }
 .hero__heading span {
   flex: 1;

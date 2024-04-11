@@ -1,20 +1,14 @@
 const $canvas = document.querySelector('canvas'),
-  // lullaby = document.querySelector('#audio'),
   $switch = document.querySelector('#switch'),
   $heroText = document.querySelector('.hero__text');
 
   const lullaby = new Audio("sounds/forest-lullaby.webm");
-  // lullaby.src = "/assets/sounds/forest-lullaby.webm";
 
 
   // Function to play the audio and loop it endlessly
 const playAudioLoop = () => {
   lullaby.loop = true;
   lullaby.play();
-  // lullaby.addEventListener('ended', () => {
-  //   lullaby.currentTime = 0; // Reset the audio to the beginning
-  //   lullaby.play(); // Play the audio again
-  // });
 };
 
 
@@ -96,6 +90,8 @@ $canvas.addEventListener('click', () => {
 
 // Event listener to play music when switch is clicked
 $switch.addEventListener('click', () => {
+  clickSound.play();
+  
  opt.power = !opt.power;
 
   if (opt.power) {
