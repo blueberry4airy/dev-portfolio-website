@@ -122,7 +122,6 @@
   display: none;
   &.active {
     display: block;
-    /* or any other display value to show the overlay */
   }
 
   .overlay {
@@ -141,7 +140,8 @@
       background-repeat: no-repeat;
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       margin-right: -2px;
-      background-color: $bg-color-grey;
+      // background-color: $bg-color-grey;
+      background-image: url("../../images/paper-pattern.png");
     }
   }
 
@@ -185,14 +185,6 @@
         & .img-wrap {
           flex: 0.5;
         }
-
-        // @include xs {
-        //   pointer-events: none;
-        // }
-
-        // @include sm {
-        //   pointer-events: none;
-        // }
       }
 
       .img-wrap {

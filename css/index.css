@@ -438,7 +438,6 @@ img {
 }
 .overlay-container.active {
   display: block;
-  /* or any other display value to show the overlay */
 }
 .overlay-container .overlay {
   position: fixed;
@@ -457,7 +456,7 @@ img {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   margin-right: -2px;
-  background-color: #dedede;
+  background-image: url("../../images/paper-pattern.png");
 }
 .overlay-container .overlay-menu {
   position: fixed;
@@ -1452,7 +1451,7 @@ img {
   }
 }
 .hero__text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.5rem;
   margin-bottom: 1.5em;
   max-width: 80%;
@@ -1461,7 +1460,7 @@ img {
   .hero__text {
     max-width: 100%;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 }
 .hero__text-span {
@@ -1550,7 +1549,7 @@ img {
 
 .hero__heading {
   display: flex;
-  margin-bottom: 15.2rem;
+  margin-bottom: 15.5rem;
 }
 @media screen and (min-width: 600px) and (max-width: 959px) {
   .hero__heading {
