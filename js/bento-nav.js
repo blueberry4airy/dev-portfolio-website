@@ -127,11 +127,13 @@ $skillsLink2.textContent = 'my stack';
 $projectsLink2.textContent = 'my work';
 $contactsLink2.textContent = "Let's get in touch!";
 
-$homeImg.src = 'images/home.gif'
-$aboutImg.src = 'images/about.gif'
-$skillsImg.src = 'images/skills.gif'
-$projectsImg.src = 'images/projects.gif'
-$contactsImg.src = 'images/contacts.gif'
+$homeImg.src = 'images/home.gif';
+$aboutImg.src = 'images/about.gif';
+$skillsImg.src = 'images/skills.gif';
+$projectsImg.src = 'images/projects.gif';
+$contactsImg.src = 'images/contacts.gif';
+
+
 
 // soudn page turn for the link
 const linkSound = new Audio("sounds/page-turn.webm");
