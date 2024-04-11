@@ -1550,7 +1550,7 @@ img {
 
 .hero__heading {
   display: flex;
-  margin-bottom: 13rem;
+  margin-bottom: 15.2rem;
 }
 @media screen and (min-width: 600px) and (max-width: 959px) {
   .hero__heading {
